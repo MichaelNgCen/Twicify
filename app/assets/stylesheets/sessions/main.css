@@ -156,7 +156,7 @@ body {
     background-color: white;
 }
 
-/* *{background-color: black;} */
+*{background-color: black;}
 
 #splash-footer{
     position: absolute;
