@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="login-form-container">
                 <h1>Login</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Email
@@ -32,7 +32,7 @@ class LoginForm extends React.Component {
                     </label>
                     <br />
                     <label>Password
-                        <input type="password" value={this.state.password} onChange={this.handleUpdate('password')} />
+                        <input id="passwordBox" type="password" value={this.state.password} onChange={this.handleUpdate('password')} />
                     </label>
                     <br />
                     <button type="submit" className="login-button">Log in</button>
