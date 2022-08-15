@@ -105,16 +105,16 @@ var App = function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_home_home_container__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__.AuthRoute, {
     exact: true,
     path: "/login",
-    component: _session_login_form_container__WEBPACK_IMPORTED_MODULE_1__["default"]
+    element: _session_login_form_container__WEBPACK_IMPORTED_MODULE_1__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__.AuthRoute, {
     path: "/signup",
-    component: _session_signup_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
+    element: _session_signup_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__.ProtectedRoute, {
     path: "/home",
-    component: _home_home_container__WEBPACK_IMPORTED_MODULE_3__["default"]
+    element: _home_home_container__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
     path: "/",
-    component: (_splash_splash__WEBPACK_IMPORTED_MODULE_4___default())
+    element: (_splash_splash__WEBPACK_IMPORTED_MODULE_4___default())
   })));
 };
 
