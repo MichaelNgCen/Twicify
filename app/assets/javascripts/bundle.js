@@ -128,7 +128,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
- // import myImage from '../../assets/images/myImage.png';
+
 
 var Homepage = function Homepage(_ref) {
   var currentUser = _ref.currentUser,
@@ -169,11 +169,15 @@ var Homepage = function Homepage(_ref) {
     }, "Sign up "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
       className: "homepage-login-button",
       to: "/login"
-    }, "Log in"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "tagline"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-      id: "Tagline"
-    }, " Music is everything")));
+    }, "Log in"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", {
+      id: "splash-footer"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      id: "tech-stack-list"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+      id: "tech-stack-title"
+    }, "TECH STACK"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+      id: "tech-stack"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "HTML 5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "CSS 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "JavaScript"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "React"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Redux"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Rails"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "PostgreSQL")))));
   };
 
   var personalGreeting = function personalGreeting() {
@@ -348,15 +352,19 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
         onSubmit: this.handleSubmit
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Email", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        id: "emailBoxLogin",
         type: "text",
         value: this.state.email,
-        onChange: this.handleUpdate('email')
+        onChange: this.handleUpdate('email'),
+        required: true
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Password", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-        id: "passwordBox",
+        id: "passwordBoxLogin",
         type: "password",
         value: this.state.password,
-        onChange: this.handleUpdate('password')
+        onChange: this.handleUpdate('password'),
+        required: true
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        id: "buttonLogin",
         type: "submit",
         className: "login-button"
       }, "Log in")));
@@ -466,14 +474,19 @@ var EmailForm = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Sign up with your email address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
         onSubmit: this.handleSubmit
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "What's your email?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        id: "emailBoxSignup",
         type: "text",
         value: this.state.email,
-        onChange: this.handleUpdate('email')
+        onChange: this.handleUpdate('email'),
+        required: true
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Create a password", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        id: "passwordBoxSignup",
         type: "password",
         value: this.state.password,
-        onChange: this.handleUpdate('password')
+        onChange: this.handleUpdate('password'),
+        required: true
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        id: "buttonSignup",
         type: "submit",
         className: "signup-buttons"
       }, "Sign Up")));

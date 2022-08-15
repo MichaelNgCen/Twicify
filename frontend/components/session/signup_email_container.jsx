@@ -30,14 +30,14 @@ class EmailForm extends React.Component {
                 <h1>Sign up with your email address</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>What's your email?
-                        <input type="text" value={this.state.email} onChange={this.handleUpdate('email')} />
+                        <input id="emailBoxSignup" type="text" value={this.state.email} onChange={this.handleUpdate('email')} required />
                     </label>
                     <br />
                     <label>Create a password
-                        <input type="password" value={this.state.password} onChange={this.handleUpdate('password')} />
+                        <input id="passwordBoxSignup" type="password" value={this.state.password} onChange={this.handleUpdate('password')} required/>
                     </label>
                     <br />
-                    <button type="submit" className="signup-buttons">Sign Up</button>
+                    <button id="buttonSignup" type="submit" className="signup-buttons">Sign Up</button>
                 </form>
             </div>
         )

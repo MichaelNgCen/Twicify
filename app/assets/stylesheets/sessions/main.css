@@ -2,13 +2,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* .homepage-header {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 56px;
-    font-weight: 200;
-    color: green
-} */
-
 .homepage-signup-login-buttons {
     color: white;
     display: flex;
@@ -26,11 +19,16 @@ body {
     min-height: 48px;
     border-radius: 24px;
     padding-top: 24px;
-    padding-left: 24px;
+    padding-left: 6px;
     padding-right: 24px;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
+}
+
+.homepage-signup-button:hover {
+    color: #34D360;
+    transition: 0.3s;
 }
 
 .homepage-login-button {
@@ -48,6 +46,12 @@ body {
     text-align: center;
     font-size: 16px;
     font-weight: 600;
+}
+
+.homepage-login-button:hover {
+    background-color: black;
+    color: #34D360;
+    transition: 0.3s;
 }
 
 .signup-form-email-section {
@@ -148,4 +152,48 @@ body {
     display: absolute;
 }
 
+#passwordBoxLogin, #passwordBoxSignup, #emailBoxLogin, #emailBoxSignup, #buttonLogin, #buttonSignup {
+    background-color: white;
+}
+
 *{background-color: black;}
+
+#splash-footer{
+    position: absolute;
+    bottom: 0;
+    margin-left: 50vw;
+}
+
+#tech-stack-title {
+    font-weight: 500;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #919496;
+    margin-bottom: 0px;
+  }
+  
+  #tech-stack-list {
+    padding: 0px 8px 0px 0px;
+    /* margin-right: -3px; */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-weight: 100;
+    /* margin-top: 108px; */
+    letter-spacing: 0.5px;
+  }
+  
+  #tech-stack-list li {
+    color: white;
+    padding: 27px 0px 0px 0px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  #tech-stack-list li:hover {
+    color: #34D360;
+    transition: 0.3s;
+    cursor: default
+  }
+  

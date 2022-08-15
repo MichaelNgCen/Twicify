@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import myImage from '../../assets/images/myImage.png';
 
 const Homepage = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <div id='nav'>
       <nav className="homepage-buttons">
       <nav className="logo">
-      <Link to="/">
+          <Link to="/">
             <img id="splash-nav-logo" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="splash-logo" />
           </Link>
       </nav>
@@ -19,10 +18,24 @@ const Homepage = ({ currentUser, logout }) => {
           <Link className="homepage-login-button" to="/login">Log in</Link>
         </div>
       </nav>
-      {/* <h1 class="homepage-header">TWICIFY</h1> */}
-      <div className="tagline">
-          <h2 id="Tagline" > Music is everything</h2>
-        </div>
+        <footer id="splash-footer">
+          {/* <Link to="/">
+          <img id="splash-nav-logo" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="splash-logo" />
+          </Link> */}
+          <div id="tech-stack-list">
+            <p id="tech-stack-title">TECH STACK</p>
+            <ul id="tech-stack">
+              <li>HTML 5</li>
+              <li>CSS 3</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>Rails</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+        </footer>
+
     </div>
   );
   

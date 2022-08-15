@@ -28,14 +28,14 @@ class LoginForm extends React.Component {
                 <h1>Login</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Email
-                        <input type="text" value={this.state.email} onChange={this.handleUpdate('email')} />
+                        <input id="emailBoxLogin" type="text" value={this.state.email} onChange={this.handleUpdate('email')} required/>
                     </label>
                     <br />
                     <label>Password
-                        <input id="passwordBox" type="password" value={this.state.password} onChange={this.handleUpdate('password')} />
+                        <input id="passwordBoxLogin" type="password" value={this.state.password} onChange={this.handleUpdate('password')} required />
                     </label>
                     <br />
-                    <button type="submit" className="login-button">Log in</button>
+                    <button id="buttonLogin" type="submit" className="login-button">Log in</button>
                 </form>
             </div>
         )
