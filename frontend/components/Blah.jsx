@@ -1,20 +1,9 @@
-import React from 'react';
-// import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
-// import LoginFormContainer from './session/login_form_container'
-// import SignupFormContainer from './session/signup_form_container'
-// import HomeContainer from './home/home_container'
-// import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import React from "react";
 
-const App = () => (
-    <div>
-        {/* <HomeContainer />
-        <Switch>
-            <AuthRoute exact path="/login" component={LoginFormContainer} />
-            <AuthRoute path="/signup" component={SignupFormContainer} />
-            <ProtectedRoute path="/home" component={HomeContainer} />
-        </Switch> */}
-        hello
-    </div>
-);
+class Blah extends React.Component {
+    render() {
+        return (<h1>hello </h1>);
+    };
+};
 
-export default App;
+export default Blah;
