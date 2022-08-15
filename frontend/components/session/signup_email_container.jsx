@@ -21,7 +21,7 @@ class EmailForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.history.push({pathname: '/playing music page?', state: { email: this.state.email, password: this.state.password}});
+        this.props.history.push({pathname: '/main', state: { email: this.state.email, password: this.state.password}});
     }
 
     render() {
