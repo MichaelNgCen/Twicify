@@ -110,29 +110,29 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var Blah = /*#__PURE__*/function (_React$Component) {
-  _inherits(Blah, _React$Component);
+var App = /*#__PURE__*/function (_React$Component) {
+  _inherits(App, _React$Component);
 
-  var _super = _createSuper(Blah);
+  var _super = _createSuper(App);
 
-  function Blah() {
-    _classCallCheck(this, Blah);
+  function App() {
+    _classCallCheck(this, App);
 
     return _super.apply(this, arguments);
   }
 
-  _createClass(Blah, [{
+  _createClass(App, [{
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "hello ");
     }
   }]);
 
-  return Blah;
+  return App;
 }((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
 
 ;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Blah);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
 
 /***/ }),
 
