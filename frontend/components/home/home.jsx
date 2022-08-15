@@ -11,7 +11,7 @@ const Homepage = ({ currentUser, logout }) => {
           </Link>
       </nav>
         <div className="homepage-signup-login-buttons">
-            <li id="github-splash" className="github-link"><a href="https://github.com/MichaelNgCen/Twicify" target="_blank">GitHub</a></li>
+            <li id="github-splash" className="splash-link"><a href="https://github.com/MichaelNgCen/Twicify" target="_blank">GitHub</a></li>
             <li id="linkedin-splash" className="splash-link"><a href="https://www.linkedin.com/in/michaelngcen/" target="_blank">LinkedIn</a></li>
             <li className="splash-link-break"><span> | </span></li>
           <Link className="homepage-signup-button" to="/signup">Sign up </Link>
