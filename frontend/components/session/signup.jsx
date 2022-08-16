@@ -83,7 +83,7 @@ class Signup extends React.Component {
     return (
       <div className="signup">
           <Link to="/">
-            <img id="splash-nav-logo" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="splash-logo" />
+            <img id="splash-nav-logo" src="https://i.postimg.cc/bvWwKxqM/black-Logo.png" alt="splash-logo" />
           </Link>
         <h2 id="signup-form-heading">Sign up for free to start listening.</h2>
           

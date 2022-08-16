@@ -1,0 +1,57 @@
+#login-logo {
+    width: 195px;
+    height: auto;
+    margin-top: 23px;
+    margin-bottom: 13px;
+  }
+
+  #login-form-heading {
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 150px;
+    letter-spacing: 0.2px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 22px;
+
+  }
+
+  div#login-error-container {
+    margin-top: -19px;
+  }
+  
+  div#login-error-pending {
+    margin-top: 33px;
+  }
+
+  #login-button:hover {
+    background: #1ec95a;
+  }
+
+  #demo-button-login:hover {
+    background: #4669b5;
+  }
+  
+  #login-redirect {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.24px;
+    margin: 30px auto;
+    margin-bottom: 150px;
+  }
+
+  #login-redirect a:link {
+    color: #1bb14f
+  }
+  
+  #login-redirect a:visited {
+    color: #1bb14f
+  }
+  
+  #login-redirect a:hover {
+    transform: scale(1.02);
+    transition: all .2s ease-in-out;
+    color: #1ec95a;
+  }
+
+

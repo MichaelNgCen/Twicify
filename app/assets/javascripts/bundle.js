@@ -269,7 +269,7 @@ var Login = /*#__PURE__*/function (_React$Component) {
         to: "/"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
         id: "splash-nav-logo",
-        src: "https://i.postimg.cc/90ZXdwyq/homepage-photo.png",
+        src: "https://i.postimg.cc/bvWwKxqM/black-Logo.png",
         alt: "splash-logo"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         id: "header-border"
@@ -522,7 +522,7 @@ var Signup = /*#__PURE__*/function (_React$Component) {
         to: "/"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
         id: "splash-nav-logo",
-        src: "https://i.postimg.cc/90ZXdwyq/homepage-photo.png",
+        src: "https://i.postimg.cc/bvWwKxqM/black-Logo.png",
         alt: "splash-logo"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
         id: "signup-form-heading"

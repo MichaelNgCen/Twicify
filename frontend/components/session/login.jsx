@@ -45,7 +45,7 @@ class Login extends React.Component {
       <div className="login">
 
           <Link to="/">
-            <img id="splash-nav-logo" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="splash-logo" />
+            <img id="splash-nav-logo" src="https://i.postimg.cc/bvWwKxqM/black-Logo.png" alt="splash-logo" />
           </Link>
 
         <span id="header-border"></span>
