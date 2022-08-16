@@ -52,7 +52,7 @@ const Splash = ({ currentUser, login, history }) => {
             <img id="snl" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="sl" />
           </Link>
           <div id="tech-stack-list">
-            <p id="tech-stack-title">TECH STACK</p>
+            <p id="tech-stack-title">TECHONOLOGIES</p>
             <ul id="tech-stack">
               <li>HTML 5</li>
               <li>CSS 3</li>
