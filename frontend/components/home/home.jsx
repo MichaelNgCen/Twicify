@@ -32,12 +32,12 @@ const Splash = ({ currentUser, login, history }) => {
 
         <main id="splash">
           <div id="tagline">
-            <h1 id="tagline-1">Music is</h1>
-            <h1 id="tagline-2">everything</h1>
+            <h1 id="tagline-1">Music for</h1>
+            <h1 id="tagline-2">everyone</h1>
           </div>
 
           <h4 id="sub-tagline">
-            Couple of songs. No credit card needed.
+            Listen to couple of songs for free.
           </h4>
           
           <button

@@ -192,11 +192,11 @@ var Splash = function Splash(_ref) {
       id: "tagline"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
       id: "tagline-1"
-    }, "Music is"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    }, "Music for"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
       id: "tagline-2"
-    }, "everything")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", {
+    }, "everyone")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", {
       id: "sub-tagline"
-    }, "Couple of songs. No credit card needed."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    }, "Listen to couple of songs for free."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
       id: "splash-demo-button",
       onClick: handleDemo
     }, "LOG IN AS A DEMO USER")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", {
