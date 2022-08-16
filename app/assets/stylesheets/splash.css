@@ -5,8 +5,8 @@
     height: 100vh;
     width: auto;
     text-align: center;
-    -webkit-animation: change 10s infinite;
-    animation: change 10s infinite;
+    -webkit-animation: change 12s infinite;
+    animation: change 12s infinite;
   }
 
   @keyframes change {
@@ -109,7 +109,7 @@
   }
   
   #tagline {
-    text-shadow: -1px 0 green, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 2px 2px black;
     font-size: 100px;
     transition: transform .3s;
   }
@@ -121,7 +121,7 @@
   }
   
   #tagline-1 {
-    text-shadow: -1px 0 green, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 2px 2px black;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #34D360;
@@ -143,7 +143,7 @@
   }
   
   #sub-tagline {
-    text-shadow: -1px 0 green, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 1px 1px black;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
@@ -169,7 +169,7 @@
   }
   
   #splash-demo-button:hover {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 1px 1px black;
     background: #ffffff;
   }
   
