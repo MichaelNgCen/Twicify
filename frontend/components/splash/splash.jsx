@@ -21,9 +21,9 @@ const Splash = ({ currentUser, login, history }) => {
         <Link to="/">
             <img id="snl" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="sl" />
           </Link>
-          <ul className="splash-links-list">
-            <li id="github-splash" className="splash-link"><a href="https://github.com/MichaelNgCen/Twicify" target="_blank">GitHub</a></li>
-            <li id="linkedin-splash" className="splash-link"><a href="https://www.linkedin.com/in/michaelngcen/" target="_blank">LinkedIn</a></li>
+          <ul className="sll">
+            <li id="gs" className="splash-link"><a href="https://github.com/MichaelNgCen/Twicify" target="_blank">GitHub</a></li>
+            <li id="ls" className="splash-link"><a href="https://www.linkedin.com/in/michaelngcen/" target="_blank">LinkedIn</a></li>
             <li className="splash-link-break"><span> | </span></li>
             <li className="splash-link"><Link to="/signup">Sign up</Link></li>
             <li className="splash-link"><Link to="/login">Log in</Link></li>
@@ -64,8 +64,9 @@ const Splash = ({ currentUser, login, history }) => {
             </ul>
           </div>
 
-          <div id="made-with-love">
+          <div id="credit">
             <p>Michael Ng Cen</p>
+            <p>吴伟欢</p>
           </div>
         </footer>
       </div>
