@@ -17,7 +17,6 @@
   }
   
   #header-border {
-    border-bottom: 1px solid rgba(0,0,0, 0.14);
     display: block;
     margin-top: 9px;
   }
@@ -25,7 +24,6 @@
   #signup-form-heading {
     font-weight: bold;
     font-size: 30px;
-    margin-right: 150px;
     letter-spacing: 0.2px;
     padding: 15px;
     text-align: center;

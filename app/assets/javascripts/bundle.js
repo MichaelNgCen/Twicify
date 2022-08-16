@@ -747,15 +747,15 @@ var Splash = function Splash(_ref) {
     };
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "splash-container"
+      className: "sc"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
-      className: "splash-nav"
+      className: "sn"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
       to: "/"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-      id: "splash-nav-logo",
+      id: "snl",
       src: "https://i.postimg.cc/90ZXdwyq/homepage-photo.png",
-      alt: "splash-logo"
+      alt: "sl"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
       className: "splash-links-list"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
@@ -798,9 +798,9 @@ var Splash = function Splash(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
       to: "/"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-      id: "splash-nav-logo",
+      id: "snl",
       src: "https://i.postimg.cc/90ZXdwyq/homepage-photo.png",
-      alt: "splash-logo"
+      alt: "sl"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       id: "tech-stack-list"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {

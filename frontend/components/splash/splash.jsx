@@ -16,10 +16,10 @@ const Splash = ({ currentUser, login, history }) => {
     }
 
     return (
-      <div className="splash-container">
-        <nav className="splash-nav">
+      <div className="sc">
+        <nav className="sn">
         <Link to="/">
-            <img id="splash-nav-logo" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="splash-logo" />
+            <img id="snl" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="sl" />
           </Link>
           <ul className="splash-links-list">
             <li id="github-splash" className="splash-link"><a href="https://github.com/MichaelNgCen/Twicify" target="_blank">GitHub</a></li>
@@ -49,7 +49,7 @@ const Splash = ({ currentUser, login, history }) => {
 
         <footer id="splash-footer">
         <Link to="/">
-            <img id="splash-nav-logo" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="splash-logo" />
+            <img id="snl" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="sl" />
           </Link>
           <div id="tech-stack-list">
             <p id="tech-stack-title">TECH STACK</p>

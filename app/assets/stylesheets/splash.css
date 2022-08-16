@@ -45,7 +45,7 @@
     }
   }
   
-  .splash-nav {
+  .sn {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -60,7 +60,7 @@
     z-index: 1;
   }
   
-  #splash-nav-logo {
+  #snl {
     height: 41px;
     width: auto;
     padding: 18px 0px 0px 80px;
@@ -117,7 +117,7 @@
     cursor: pointer;  
   }
   
-  .splash-container {
+  .sc {
     display: flex;
     flex-direction: column;
     position: relative;
