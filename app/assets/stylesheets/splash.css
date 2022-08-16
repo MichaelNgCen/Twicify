@@ -1,11 +1,30 @@
 #splash {
-    background-image: url("https://i.postimg.cc/Hx3wtp8Y/dtna.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     width: auto;
     text-align: center;
+    -webkit-animation: change 10s infinite;
+    animation: change 10s infinite;
+  }
+
+  @keyframes change {
+    0% {
+      background-image: url("https://i.postimg.cc/kM1RKL3q/winter-aespa-girls-real-world-4k-wallpaper-uhdpaper-com-676-1-h.jpg");
+    }
+    25% {
+      background-image: url("https://i.postimg.cc/prt87FCx/dahyun-twice-scientist-formula-of-love-explosion-4k-wallpaper-uhdpaper-com-295-1-f.jpg");
+    }
+    50% {
+      background-image: url("https://i.postimg.cc/vTS8JRLy/blackpink-jennie-calvin-klein-photoshoot-uhdpaper-com-4-K-6-1708.jpg");
+    }
+    75% {
+      background-image: url("https://i.postimg.cc/cHh540bp/kim-chaewon-le-sserafim-4k-wallpaper-uhdpaper-com-488-1-g.jpg");
+    }
+    100% {
+      background-image: url("https://i.postimg.cc/1XxTjJbt/ive-love-dive-wonyoung-4k-wallpaper-uhdpaper-com-803-0-f.jpg");
+    }
   }
   
   .splash-nav {
