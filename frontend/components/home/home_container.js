@@ -1,13 +1,18 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
-import Home from './home';
+import { login } from '../../actions/session_actions';
+import Splash from './home';
 
-const mapStateToProps = ({ session, entities: { users } }) => ({
+const mSTP = ({ session, entities: { users } }) => {
+  return {
     currentUser: users[session.id]
-});
+  };
+};
 
-const mapDispatchToProps = dispatch => ({
+const mDTP = dispatch => {
+  return {
+    login: (user) => dispatch(login(user)),
     logout: () => dispatch(logout())
-});
+  }
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mSTP, mDTP)(Splash);
