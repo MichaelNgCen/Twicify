@@ -22,6 +22,7 @@
   }
   
   #signup-form-heading {
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 30px;
     letter-spacing: 0.2px;
@@ -46,19 +47,27 @@
   }
   
   .form-prompt, #birthday-prompt {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-transform: none;
+    letter-spacing: normal;
     box-sizing: border-box;
-    width: 290px;
-    text-align: left;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    margin-bottom: 7px;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 8px;
   }
   
   #birthday-prompt {
     box-sizing: border-box;
     width: 450px;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin: 0 auto;
     padding: 0px 0px 21px 0px;
   }

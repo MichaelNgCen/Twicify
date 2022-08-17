@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: black;
+    background-color: #101010;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -92,6 +92,7 @@
   }
   
   .splash-link a {
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
     text-decoration: none;
     color:white;
     letter-spacing: 0.5px;
@@ -101,10 +102,12 @@
   }
   
   #gs {
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
     margin-right: 6px;
   }
   
   #ls {
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
     margin-right: 3px;
   }
   
@@ -140,7 +143,7 @@
   
   #tagline-1 {
     text-shadow: 2px 2px black;
-    font-family: 'Arvo', serif;
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
     font-weight: 600;
     color: #34D360;
     height: 150px;
@@ -150,7 +153,7 @@
   }
   
   #tagline-2 {
-    font-family: 'Arvo', serif;
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
     font-weight: 600;
     color: #34D360;
     height: 150px;
@@ -161,7 +164,7 @@
   }
   
   #sub-tagline {
-    font-family: 'Arvo', serif;
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
     text-shadow: 1px 1px black;
     font-size: 20px;
     font-weight: 100;
@@ -196,7 +199,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: black;
+    background-color: #101010;
     color: white;
     box-sizing: border-box;
     padding: 0;
