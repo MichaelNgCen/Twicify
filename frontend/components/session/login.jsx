@@ -36,10 +36,33 @@ class Login extends React.Component {
       username: "kimDahyun",
       password: "JennieKim"
     }
-    this.props.login(demo)
-      .then(() => this.props.history.push('/'));
-  }
+    const speed = 100;
 
+   if (this.state.username !== demo.username) {
+            const inputUsername = setInterval(() => {
+                if (this.state.username !== demo.username) {
+                    const temp = demo.username.slice(0, this.state.username.length + 1);
+                    this.setState({ username: temp })
+                } else {
+                    clearInterval(inputUsername);
+                    animatePW();
+                }
+            }, speed)
+        }
+        const animatePW = () => {
+            if (this.state.password !== demo.password) {
+                const inputPassword = setInterval(() => {
+                    if (this.state.password !== demo.password) {
+                        const temp = demo.password.slice(0, this.state.password.length + 1);
+                        this.setState({ password: temp });
+                    } else {
+                        clearInterval(inputPassword);
+                        this.props.login(demo).then(() => this.props.history.push('/'));
+                    }
+                }, speed);
+            }
+        }
+    }
   render() { 
     return (
       <div className="login">
