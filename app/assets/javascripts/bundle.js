@@ -499,7 +499,6 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
           break;
 
         case "library":
-          // this.props.fetchUser(this.props.currentUserId);
           if (pageId === "songs") {
             this.props.fetchLikedSongs(currentUserId).then(function () {
               return _this2.renderContent();

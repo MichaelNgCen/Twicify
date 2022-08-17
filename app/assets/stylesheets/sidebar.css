@@ -198,14 +198,12 @@ ul.playlist-links::-webkit-scrollbar-thumb {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis
-  /* transition: all 0.3s ease-out; */
 }
 
 .sidebar-playlist-item:hover {
   color: #FFFFFF;
 }
 
-/* temporary until user dropdown menu implemeneted */
 #logout { 
   border-radius: 26px;
   font-family: 'Rubik', sans-serif;
