@@ -247,6 +247,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -261,17 +263,31 @@ var Home = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Home);
 
     _this = _super.call(this, props);
-    _this.state = {};
+
+    _defineProperty(_assertThisInitialized(_this), "getTime", function () {
+      var today = new Date(),
+          curTime = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+
+      _this.setState({
+        curTime: curTime
+      });
+    });
+
+    _this.state = {
+      curTime: ""
+    };
     return _this;
   }
 
   _createClass(Home, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.getTime();
+    }
+  }, {
     key: "render",
     value: function render() {
       var currentUser = this.props.currentUser;
-
-      /*#__PURE__*/
-      react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Welcome to the home page");
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "genre-page-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -279,7 +295,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
         id: "home-header"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
         className: "genre-page-title"
-      }, "Welcome, ", this.props.username)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, this.state.curTime < "12:00:00" ? "Good Morning" : "", this.state.curTime >= "12:00:00" && this.state.curTime < "17:00:00" ? "Good Afternoon" : "", this.state.curTime >= "17:00:00" && this.state.curTime < "24:00:00" ? "Good Evening" : "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "home-section-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "genre-section"

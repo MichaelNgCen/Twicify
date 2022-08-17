@@ -4,19 +4,35 @@ import { connect } from "react-redux";
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      curTime: ""
+    }
   }
+
+  componentDidMount() {
+    this.getTime();
+  }
+
+  getTime = () => {
+    var today = new Date(),
+ 
+    curTime = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+ 
+ 
+    this.setState({ curTime });
+  };
 
   render() {
     const { currentUser } = this.props;
-    <h1>Welcome to the home page</h1>
     return (
       <div className="genre-page-container">
         <div
           className="genre-page-header"
           id="home-header">
           <h1 className="genre-page-title">
-            Welcome, {this.props.username}
+            {this.state.curTime < "12:00:00" ? "Good Morning" : ""}
+            {this.state.curTime >= "12:00:00" && this.state.curTime < "17:00:00" ? "Good Afternoon" : ""}
+            {this.state.curTime >= "17:00:00" && this.state.curTime < "24:00:00" ? "Good Evening" : ""}
           </h1>
         </div>
 
