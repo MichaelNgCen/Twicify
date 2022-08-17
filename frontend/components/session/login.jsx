@@ -33,8 +33,8 @@ class Login extends React.Component {
   handleDemo(e) {
     e.preventDefault();
     const demo = {
-      username: "Demo User",
-      password: "demopassword123"
+      username: "kimDahyun",
+      password: "JennieKim"
     }
     this.props.login(demo)
       .then(() => this.props.history.push('/'));

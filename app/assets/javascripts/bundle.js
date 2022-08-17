@@ -995,8 +995,8 @@ var Login = /*#__PURE__*/function (_React$Component) {
 
       e.preventDefault();
       var demo = {
-        username: "Demo User",
-        password: "demopassword123"
+        username: "kimDahyun",
+        password: "JennieKim"
       };
       this.props.login(demo).then(function () {
         return _this4.props.history.push('/');
@@ -1247,8 +1247,8 @@ var Signup = /*#__PURE__*/function (_React$Component) {
 
       e.preventDefault();
       var demo = {
-        username: "Demoser",
-        password: "demopassword123"
+        username: "kimDahyun",
+        password: "JennieKim"
       };
       this.props.login(demo).then(function () {
         return _this4.props.history.push('/');
