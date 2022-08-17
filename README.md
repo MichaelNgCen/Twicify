@@ -4,6 +4,6 @@
 
 # Description: 
 
- <a href="https://open.spotify.com/" target=”_blank”>Twicify</a> is single-page music streaming web application inspired by Spotify.
+ <a href="https://twicify.herokuapp.com/#/" target=”_blank”>Twicify</a> is single-page music streaming web application inspired by Spotify.
  
  
