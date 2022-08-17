@@ -1247,7 +1247,7 @@ var Signup = /*#__PURE__*/function (_React$Component) {
 
       e.preventDefault();
       var demo = {
-        username: "Demo User",
+        username: "Demoser",
         password: "demopassword123"
       };
       this.props.login(demo).then(function () {
