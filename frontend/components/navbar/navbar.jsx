@@ -357,7 +357,7 @@ class Navbar extends React.Component {
 
         <div className="user-dropdown" onClick={() => this.handleDropDown()} ref={div => this.dropDown = div}>
           <button>
-            <span className="user-dropdown-text"> kimDahyun </span>
+            <span className="user-dropdown-text"> {this.props.currentUsername} </span>
             {this.state.hideDropDown ? <i className="fas fa-caret-down"></i> : <i className="fas fa-caret-up"></i>}
           </button>
 
