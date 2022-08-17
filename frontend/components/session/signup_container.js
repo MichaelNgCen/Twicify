@@ -2,6 +2,7 @@ import Signup from './signup'
 import { connect } from 'react-redux'
 import { signup, login, clearErrors } from '../../actions/session_actions'
 
+
 const mSTP = (state) => {
   return {
     formType: 'signup',
