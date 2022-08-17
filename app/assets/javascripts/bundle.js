@@ -269,6 +269,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var currentUser = this.props.currentUser;
+
+      /*#__PURE__*/
+      react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Welcome to the home page");
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "genre-page-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -276,7 +279,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
         id: "home-header"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
         className: "genre-page-title"
-      }, "Welcome ", currentUser)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, "Welcome, ", this.props.username)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "home-section-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "genre-section"
@@ -1840,8 +1843,8 @@ var Splash = function Splash(_ref) {
     var handleDemo = function handleDemo(e) {
       e.preventDefault();
       var demo = {
-        username: "Demo User",
-        password: "demopassword123"
+        username: "kimDahyun",
+        password: "JennieKim"
       };
       login(demo).then(function () {
         return history.push('/');
@@ -1900,7 +1903,7 @@ var Splash = function Splash(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: "/"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-      id: "snl",
+      id: "snl2",
       src: "https://i.postimg.cc/90ZXdwyq/homepage-photo.png",
       alt: "sl"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {

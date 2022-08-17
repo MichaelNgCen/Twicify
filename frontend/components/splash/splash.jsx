@@ -9,8 +9,8 @@ const Splash = ({ currentUser, login, history }) => {
     const handleDemo = (e) => {
       e.preventDefault();
       const demo = {
-        username: "Demo User",
-        password: "demopassword123"
+        username: "kimDahyun",
+        password: "JennieKim"
       }
       login(demo)
         .then(() => history.push('/'));
@@ -50,7 +50,7 @@ const Splash = ({ currentUser, login, history }) => {
 
         <footer id="splash-footer">
         <Link to="/">
-            <img id="snl" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="sl" />
+            <img id="snl2" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="sl" />
           </Link>
           <div id="tech-stack-list">
             <p id="tech-stack-title">TECHONOLOGIES</p>

@@ -9,14 +9,14 @@ class Home extends React.Component {
 
   render() {
     const { currentUser } = this.props;
-
+    <h1>Welcome to the home page</h1>
     return (
       <div className="genre-page-container">
         <div
           className="genre-page-header"
           id="home-header">
           <h1 className="genre-page-title">
-            Welcome {currentUser}
+            Welcome, {this.props.username}
           </h1>
         </div>
 
