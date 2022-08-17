@@ -55,39 +55,6 @@ class Navbar extends React.Component {
     });
     
     switch (location) {
-      case "playlists":
-        this.props.fetchPlaylist(pageId).then(() => this.renderContent());
-        break;
-      case "albums":
-        this.props.fetchAlbum(pageId).then(() => this.renderContent());
-        break;
-      case "artists":
-        this.props.fetchArtist(pageId).then(() => this.renderContent());
-        break;
-      case "library":
-        if (pageId === "songs") {
-          this.props.fetchLikedSongs(currentUserId).then(() => this.renderContent());
-        } else if (pageId === "playlists") {
-          this.props.fetchLikedSongsPreview(currentUserId).then(() => this.renderContent());
-        } else if (pageId === "artists") {
-          this.props.fetchLikedArtists(currentUserId).then(() => this.renderContent());
-        } else if (pageId === "albums") {
-          this.props.fetchLikedAlbums(currentUserId).then(() => this.renderContent());
-        }
-      case "search":
-        if (location === "search" && this.state.searchQuery === "") {
-          this.props.receiveSearchPage();
-        }
-      case "genres":
-        if (pageId === "hiphop") {
-          this.props.fetchHipHop(currentUserId).then(() => this.renderContent());
-        } else if (pageId === "pop") {
-          this.props.fetchPop(currentUserId).then(() => this.renderContent());
-        } else if (pageId === "rock") {
-          this.props.fetchRock(currentUserId).then(() => this.renderContent());
-        } else if (pageId === "rnb") {
-          this.props.fetchRnb(currentUserId).then(() => this.renderContent());
-        }
       default:
         if (location === "") {
             ""
@@ -390,7 +357,7 @@ class Navbar extends React.Component {
 
         <div className="user-dropdown" onClick={() => this.handleDropDown()} ref={div => this.dropDown = div}>
           <button>
-            <span className="user-dropdown-text">{this.props.currentUsername}</span>
+            <span className="user-dropdown-text"> kimDahyun </span>
             {this.state.hideDropDown ? <i className="fas fa-caret-down"></i> : <i className="fas fa-caret-up"></i>}
           </button>
 

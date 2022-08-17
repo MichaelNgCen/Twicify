@@ -499,67 +499,6 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
       });
 
       switch (location) {
-        case "playlists":
-          this.props.fetchPlaylist(pageId).then(function () {
-            return _this2.renderContent();
-          });
-          break;
-
-        case "albums":
-          this.props.fetchAlbum(pageId).then(function () {
-            return _this2.renderContent();
-          });
-          break;
-
-        case "artists":
-          this.props.fetchArtist(pageId).then(function () {
-            return _this2.renderContent();
-          });
-          break;
-
-        case "library":
-          if (pageId === "songs") {
-            this.props.fetchLikedSongs(currentUserId).then(function () {
-              return _this2.renderContent();
-            });
-          } else if (pageId === "playlists") {
-            this.props.fetchLikedSongsPreview(currentUserId).then(function () {
-              return _this2.renderContent();
-            });
-          } else if (pageId === "artists") {
-            this.props.fetchLikedArtists(currentUserId).then(function () {
-              return _this2.renderContent();
-            });
-          } else if (pageId === "albums") {
-            this.props.fetchLikedAlbums(currentUserId).then(function () {
-              return _this2.renderContent();
-            });
-          }
-
-        case "search":
-          if (location === "search" && this.state.searchQuery === "") {
-            this.props.receiveSearchPage();
-          }
-
-        case "genres":
-          if (pageId === "hiphop") {
-            this.props.fetchHipHop(currentUserId).then(function () {
-              return _this2.renderContent();
-            });
-          } else if (pageId === "pop") {
-            this.props.fetchPop(currentUserId).then(function () {
-              return _this2.renderContent();
-            });
-          } else if (pageId === "rock") {
-            this.props.fetchRock(currentUserId).then(function () {
-              return _this2.renderContent();
-            });
-          } else if (pageId === "rnb") {
-            this.props.fetchRnb(currentUserId).then(function () {
-              return _this2.renderContent();
-            });
-          }
-
         default:
           if (location === "") {
             "";
@@ -952,7 +891,7 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         className: "user-dropdown-text"
-      }, this.props.currentUsername), this.state.hideDropDown ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
+      }, " kimDahyun "), this.state.hideDropDown ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
         className: "fas fa-caret-down"
       }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
         className: "fas fa-caret-up"
@@ -1595,10 +1534,12 @@ var Signup = /*#__PURE__*/function (_React$Component) {
       }, "By clicking on Sign up, you agree to Twicify's Terms and Conditions of Use."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "To learn more about how Twicify collects, uses, shares and protects your personal data please read Twicify's Privacy Policy.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
         id: "signup-submit-button",
         type: "submit"
-      }, "SIGN UP"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+      }, "SIGN UP"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/login"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
         id: "demo-button-signup",
-        onClick: this.handleDemo
-      }, "LOG IN AS A DEMO USER INSTEAD"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+        type: "button"
+      }, " LOG IN AS A DEMO USER INSTEAD ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
         id: "login-redirect"
       }, "Have an account? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/login"
@@ -1911,10 +1852,12 @@ var Splash = function Splash(_ref) {
       id: "tagline-2"
     }, "everyone")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", {
       id: "sub-tagline"
-    }, "Listen to couple of songs for free."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    }, "Listen to couple of songs for free."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+      to: "/login"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
       id: "splash-demo-button",
-      onClick: handleDemo
-    }, "LOG IN AS A DEMO USER")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", {
+      type: "button"
+    }, " LOG IN AS A DEMO USER "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", {
       id: "splash-footer"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: "/"
@@ -60929,37 +60872,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
- // import { fetchPlaylistSongs } from "./actions/song_actions"
-// import { fetchPlaylist, fetchPlaylists, createPlaylist, updatePlaylist, deletePlaylist, addSong, removeSong } from "./util/playlist_api_util"
-// const playlist1 = {
-//   user_id: 1,
-//   name: "Second Playlist",
-//   private: false,
-//   description: nil
-// }
-// const updatedPlaylist1 = {
-//   id: 1,
-//   user_id: 1,
-//   name: "I'VE UPDATED!",
-//   private: false,
-//   description: "This wasn't here before .__."
-// }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // TESTING START
-  // window.signup = signup;
-  // window.login = login;
-  //   window.logout = logout;
-  // window.store = store;
-  // window.fetchPlaylist = fetchPlaylist;
-  // window.fetchPlaylists = fetchPlaylists;
-  // window.createPlaylist = createPlaylist;
-  // window.updatePlaylist = updatePlaylist;
-  // window.deletePlaylist = deletePlaylist;
-  // window.addSong = addSong;
-  // window.removeSong = removeSong;
-  // window.fetchPlaylistSongs = fetchPlaylistSongs;
-  // TESTING END
+  window.store = store;
   var store;
 
   if (window.currentUser) {

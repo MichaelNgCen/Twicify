@@ -40,12 +40,11 @@ const Splash = ({ currentUser, login, history }) => {
           <h4 id="sub-tagline">
             Listen to couple of songs for free.
           </h4>
-          
-          <button
-            id="splash-demo-button"
-            onClick={handleDemo}>
-            LOG IN AS A DEMO USER
-          </button>
+      
+          <Link to="/login">
+            <button id="splash-demo-button" type="button"> LOG IN AS A DEMO USER </button>
+          </Link>
+
         </main>
 
         <footer id="splash-footer">

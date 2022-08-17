@@ -225,11 +225,9 @@ class Signup extends React.Component {
 
             <button id="signup-submit-button" type="submit">SIGN UP</button>
 
-            <button
-              id="demo-button-signup"
-              onClick={this.handleDemo}>
-              LOG IN AS A DEMO USER INSTEAD
-            </button>
+            <Link to="/login">
+              <button id="demo-button-signup" type="button"> LOG IN AS A DEMO USER INSTEAD </button>
+            </Link>
 
           <p id="login-redirect">Have an account? <Link to="/login">Log In</Link>.</p>
           </form>
