@@ -685,9 +685,8 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
 
         switch (location) {
           case "playlists":
-            this.props.fetchPlaylist(pageId).then(function () {
-              return _this3.renderContent();
-            });
+            // this.props.fetchPlaylist(pageId).then(() => this.renderContent());
+            console.log(this.props.playlists);
             break;
 
           case "albums":
@@ -1819,10 +1818,8 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
         user_id: this.props.currentUser,
         name: "My Playlist #".concat(userPlaylists.length + 1),
         "private": false
-      };
-      {
-        console.log(newPlaylist.name);
-      }
+      }; // {console.log(newPlaylist)}
+
       this.props.createPlaylist(newPlaylist).then(function () {
         return _this2.props.history.push("/playlists/".concat(_this2.props.lastPlaylist));
       });
@@ -1841,13 +1838,16 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
       var pathName = this.props.location.pathname.split('/');
       var location = pathName[1];
       var pageId = pathName[2];
+      {
+        console.log(this.props.playlists);
+      }
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "user-data-directory"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
         id: "snl",
-        src: "https://i.postimg.cc/90ZXdwyq/homepage-photo.png",
+        src: "https://i.ibb.co/x6s4mq2/imageedit-8-3299548283.png",
         alt: "sl"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "sidebar-directory"
@@ -1896,7 +1896,7 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
         id: "line-break"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
         className: "playlist-links"
-      }));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null)));
     }
   }]);
 
@@ -1923,14 +1923,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_playlist_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/playlist_actions */ "./frontend/actions/playlist_actions.js");
 
 
-
+ // import { fetchLikedPlaylists } from "../../actions/library_actions";
 
 var mSTP = function mSTP(state, ownProps) {
   var currentUser = state.session.id;
-  var playlists = state.entities.playlists;
+  var playlists = state.entities.playlists; // const currentUserLikes = state.entities.users[currentUser].likes;
+  // const likedPlaylists = Object.keys(currentUserLikes.playlists);
+
   return {
     playlists: playlists,
-    currentUser: currentUser
+    currentUser: currentUser,
+    // likedPlaylists,
+    lastPlaylist: Object.keys(playlists).slice(-1)[0]
   };
 };
 

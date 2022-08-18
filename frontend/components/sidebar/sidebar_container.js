@@ -1,13 +1,19 @@
 import { connect } from "react-redux";
 import Sidebar from "./sidebar";
 import { createPlaylist, fetchPlaylist } from "../../actions/playlist_actions";
+// import { fetchLikedPlaylists } from "../../actions/library_actions";
 
 const mSTP = (state, ownProps) => {
   const currentUser = state.session.id;
   const { playlists } = state.entities;
+  // const currentUserLikes = state.entities.users[currentUser].likes;
+  // const likedPlaylists = Object.keys(currentUserLikes.playlists);
+
   return ({
     playlists,
-    currentUser
+    currentUser,
+    // likedPlaylists,
+    lastPlaylist: Object.keys(playlists).slice(-1)[0]
   });
 };
 

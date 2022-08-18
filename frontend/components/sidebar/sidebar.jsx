@@ -20,7 +20,7 @@ class Sidebar extends React.Component {
         name: `My Playlist #${userPlaylists.length + 1}`,
         private: false
     }
-    {console.log(newPlaylist.name)}
+    // {console.log(newPlaylist)}
     this.props.createPlaylist(newPlaylist)
       .then(() => this.props.history.push(`/playlists/${this.props.lastPlaylist}`));
   };
@@ -35,12 +35,11 @@ class Sidebar extends React.Component {
     const location = pathName[1];
     const pageId = pathName[2];
 
-    
-
+    {console.log(this.props.playlists)}
     return (
       <div className="user-data-directory">
         <Link to="/">
-            <img id="snl" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="sl" />
+            <img id="snl" src="https://i.ibb.co/x6s4mq2/imageedit-8-3299548283.png" alt="sl" />
           </Link>
 
         <div className="sidebar-directory">
@@ -73,6 +72,16 @@ class Sidebar extends React.Component {
         <div id="line-break"></div>
         
         <ul className="playlist-links">
+          {/* {userPlaylists.slice(0).reverse().map(playlist => */}
+            {/* <li className="playlist-link" key={playlist.id}> */}
+              {/* <Link to={`/playlists/${playlist.id}`}> */}
+                {/* <div className="sidebar-playlist-item"> */}
+                <div>
+                  {/* {Playlist.name} */}
+                </div>
+              {/* </Link> */}
+            {/* </li> */}
+          {/* )} */}
         </ul>
       </div>
     );
