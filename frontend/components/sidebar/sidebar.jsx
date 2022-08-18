@@ -14,10 +14,19 @@ class Sidebar extends React.Component {
 
   handleCreate(e) {
     e.preventDefault();
-    
+    const userPlaylists = Object.values(this.props.playlists)
+    const newPlaylist = {
+        user_id: this.props.currentUser,
+        name: `My Playlist #${userPlaylists.length + 1}`,
+        private: false
+    }
+    {console.log(newPlaylist.name)}
+    this.props.createPlaylist(newPlaylist)
+      .then(() => this.props.history.push(`/playlists/${this.props.lastPlaylist}`));
   };
 
   handleClick(e) {
+    this.props.fetchPlaylist()
   }
 
   render() {

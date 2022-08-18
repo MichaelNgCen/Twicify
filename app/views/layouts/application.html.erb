@@ -7,6 +7,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type="text/javascript">
+      window.defaultPlaylistPicture = "<%= image_url('default_playlist_image.png') %>"
+      window.defaultPlaylistIcon = "<%= image_url('default_playlist_icon.png') %>"
+      window.photoOverlay = "<%= image_url('photo_overlay.png') %>"
+      window.playButton = "<%= image_url('show_page_play.png') %>"
+      window.pauseButton = "<%= image_url('show_page_pause.png') %>"
+    </script>
   </head>
 
   <body>

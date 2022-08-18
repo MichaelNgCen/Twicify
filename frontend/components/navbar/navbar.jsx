@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { debounce } from "lodash";
 
+
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -89,8 +90,6 @@ class Navbar extends React.Component {
         }
       }
       
-      this.props.loading();
-
       this.setState({
         searchQuery: ""
       });
@@ -370,6 +369,16 @@ class Navbar extends React.Component {
             <div className="user-dropdown-option" onClick={() => window.open("https://www.linkedin.com/in/michaelngcen/", "_blank")} >
               <span>LinkedIn</span>
                 <i className="fab fa-linkedin"></i>
+            </div>
+
+            <div className="user-dropdown-option" onClick={() => window.open("https://www.instagram.com/michaelngcen/", "_blank")} >
+              <span>Instagram</span>
+                <i className="fab fa-ig"></i>
+            </div>
+
+            <div className="user-dropdown-option" onClick={() => window.open("https://open.spotify.com/", "_blank")} >
+              <span>Spotify</span>
+                <i className="fas fa-user-circle"></i>
             </div>
 
             <div

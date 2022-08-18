@@ -11,14 +11,47 @@
 }
 
 h1.genre-page-title {
-  color: white;
-  font-size: 55px;
-  font-weight: 500;
-  margin-bottom: 35px;
-  margin-left: 50px;
+  line-height: 1em;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0px;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-family,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+  color: var(--text-base,#ffffff);
+  display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .genre-section-container {
   padding: 0px 50px;
   padding-top: 30px;
+}
+
+.material-icons {
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    height: 40px;
+    padding: 0 16px;
+}
+
+.library-title {
+  display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+    
 }
