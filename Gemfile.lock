@@ -48,7 +48,7 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     aws-eventstream (1.2.0)
-    aws-partitions (1.618.0)
+    aws-partitions (1.619.0)
     aws-sdk-core (3.132.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
@@ -125,9 +125,7 @@ GEM
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
-    nokogiri (1.12.5-x86_64-linux)
-      racc (~> 1.4)
-    pg (1.4.2)
+    pg (1.4.3)
     public_suffix (4.0.7)
     puma (3.12.6)
     racc (1.6.0)
@@ -210,9 +208,9 @@ GEM
 
 PLATFORMS
   -darwin-21
-  x86_64-linux
 
 DEPENDENCIES
+  activestorage
   aws-sdk-s3
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
