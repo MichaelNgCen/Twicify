@@ -3,16 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { openModal } from '../../actions/modal_actions';
-// import { like, unlike } from '../../actions/library_actions';
-// import { renderDateAdded, renderTotalDuration } from '../../util/time_util';
-// import { openAlert, closeAlert } from '../../actions/alert_actions';
-// import SongListItem from '../songs/song_list_item'
 
-// import {
-//   playSong,
-//   pauseSong,
-//   fetchPage
-// } from '../../actions/playbar_actions';
 
 class Playlist extends React.Component {
   _isMounted = false;

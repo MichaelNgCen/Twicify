@@ -20,7 +20,6 @@ class Sidebar extends React.Component {
         name: `My Playlist #${userPlaylists.length + 1}`,
         private: false
     }
-    // {console.log(newPlaylist)}
     this.props.createPlaylist(newPlaylist)
       .then(() => this.props.history.push(`/playlists/${this.props.lastPlaylist}`));
   };

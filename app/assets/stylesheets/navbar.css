@@ -177,7 +177,7 @@ span.material-icons {
   align-items: center;
   justify-content: space-around;
   color: white;
-  background: #000000;
+  background: black;
 }
 
 .user-dropdown > button:hover, .user-dropdown > button:focus {

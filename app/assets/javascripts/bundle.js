@@ -429,13 +429,15 @@ var Home = /*#__PURE__*/function (_React$Component) {
         id: "home-header"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
         className: "genre-page-title"
-      }, this.state.curTime < "12:00:00" ? "Good Morning" : "", this.state.curTime >= "12:00:00" && this.state.curTime < "17:00:00" ? "Good Afternoon" : "", this.state.curTime >= "17:00:00" && this.state.curTime < "24:00:00" ? "Good Evening" : "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, this.state.curTime < "12:00:00" ? " Good Morning" : "", this.state.curTime >= "12:00:00" && this.state.curTime < "17:00:00" ? " Good Afternoon" : "", this.state.curTime >= "17:00:00" && this.state.curTime < "24:00:00" ? " Good Evening" : "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "home-section-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "genre-section"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
         className: "library-title"
-      }, "Popular Artists"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, "Popular Artists"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "name-artist"
+      }, " Le Sserafim "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "library-index"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "home-section-container"
@@ -443,7 +445,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "genre-section"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
         className: "library-title"
-      }, "Popular Albums"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, "Popular Albums"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "name-albums"
+      }, " Fearless "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "library-index"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "home-section-container"
@@ -451,7 +455,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "genre-section"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
         className: "library-title"
-      }, "Trending Playlists"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, "Trending Playlists"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "name-playlist"
+      }, " Girl Krush "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "library-index"
       }))));
     }

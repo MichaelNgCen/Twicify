@@ -3,9 +3,9 @@
         images = []
         json.partial! 'api/artists/artist', artist: artist
         
-        artist.photos.each do |photo|
-          images << url_for(photo)
-        end
+        # artist.photos.each do |photo|
+        #   images << url_for(photo)
+        # end
 
         json.photos images
         json.created_at @likes[artist.id]
