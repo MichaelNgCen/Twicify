@@ -213,21 +213,13 @@ class Signup extends React.Component {
                 <p className="error-message">{errors.gender}</p>
             </div>
 
-            <div className="policies">
-              <p id="toc">
-                By clicking on Sign up, you agree to Twicify's Terms and Conditions of Use.
-              </p>
-
-              <p>
-                To learn more about how Twicify collects, uses, shares and protects your personal data please read Twicify's Privacy Policy.
-              </p>
-            </div>
-
             <button id="signup-submit-button" type="submit">SIGN UP</button>
 
-            <Link to="/login">
-              <button id="demo-button-signup" type="button"> LOG IN AS A DEMO USER INSTEAD </button>
-            </Link>
+            <button
+              id="demo-button-signup"
+              onClick={this.handleDemo}>
+              LOG IN AS A DEMO USER INSTEAD
+            </button>
 
           <p id="login-redirect">Have an account? <Link to="/login">Log In</Link>.</p>
           </form>

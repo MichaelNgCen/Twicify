@@ -41,16 +41,15 @@ const Splash = ({ currentUser, login, history }) => {
             Listen to couple of songs for free.
           </h4>
       
-          <Link to="/login">
-            <button id="splash-demo-button" type="button"> LOG IN AS A DEMO USER </button>
-          </Link>
+          <button
+            id="splash-demo-button"
+            onClick={handleDemo}>
+            LOG IN AS A DEMO USER
+          </button>
 
         </main>
 
         <footer id="splash-footer">
-        <Link to="/">
-            <img id="snl2" src="https://i.postimg.cc/90ZXdwyq/homepage-photo.png" alt="sl" />
-          </Link>
           <div id="tech-stack-list">
             <p id="tech-stack-title">TECHONOLOGIES</p>
             <ul id="tech-stack">

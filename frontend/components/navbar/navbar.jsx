@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { debounce } from "lodash";
 
-
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -51,14 +50,50 @@ class Navbar extends React.Component {
       }
     }
 
+    this.props.loading();
+
     this.setState({
       searchQuery: ""
     });
     
     switch (location) {
+      case "playlists":
+        this.props.fetchPlaylist(pageId).then(() => this.renderContent());
+        break;
+      case "albums":
+        this.props.fetchAlbum(pageId).then(() => this.renderContent());
+        break;
+      case "artists":
+        this.props.fetchArtist(pageId).then(() => this.renderContent());
+        break;
+      case "library":
+        // this.props.fetchUser(this.props.currentUserId);
+        if (pageId === "songs") {
+          this.props.fetchLikedSongs(currentUserId).then(() => this.renderContent());
+        } else if (pageId === "playlists") {
+          this.props.fetchLikedSongsPreview(currentUserId).then(() => this.renderContent());
+        } else if (pageId === "artists") {
+          this.props.fetchLikedArtists(currentUserId).then(() => this.renderContent());
+        } else if (pageId === "albums") {
+          this.props.fetchLikedAlbums(currentUserId).then(() => this.renderContent());
+        }
+      case "search":
+        if (location === "search" && this.state.searchQuery === "") {
+          this.props.receiveSearchPage();
+        }
+      case "genres":
+        if (pageId === "hiphop") {
+          this.props.fetchHipHop(currentUserId).then(() => this.renderContent());
+        } else if (pageId === "pop") {
+          this.props.fetchPop(currentUserId).then(() => this.renderContent());
+        } else if (pageId === "rock") {
+          this.props.fetchRock(currentUserId).then(() => this.renderContent());
+        } else if (pageId === "rnb") {
+          this.props.fetchRnb(currentUserId).then(() => this.renderContent());
+        }
       default:
         if (location === "") {
-            ""
+          this.props.fetchHome().then(() => this.renderContent());
         }
         break;
     }

@@ -23,6 +23,7 @@ Rails.application.configure do
     }
   else
     config.action_controller.perform_caching = false
+    # config.action_controller.include_all_helpers = false
 
     config.cache_store = :null_store
   end

@@ -3,6 +3,12 @@ import { withRouter } from 'react-router-dom';
 import { createPlaylist } from "../../actions/playlist_actions"
 import Library from "./library";
 
+import {
+  playSong,
+  pauseSong,
+  fetchLibraryItem
+} from '../../actions/playbar_actions';
+
 const mSTP = (state) => {
   const { id } = state.session;
   const { loading } = state.ui;

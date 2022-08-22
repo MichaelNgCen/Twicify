@@ -10,6 +10,7 @@ class Sidebar extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchLikedPlaylists(this.props.currentUser);
   }
 
   handleCreate(e) {
@@ -29,29 +30,35 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    const { currentUser } = this.props;
+    const { playlists, likedPlaylists, currentUser } = this.props;
     const pathName = this.props.location.pathname.split('/');
     const location = pathName[1];
     const pageId = pathName[2];
 
-    {console.log(this.props.playlists)}
+    let userPlaylists = Object.values(playlists).filter(playlist =>
+      playlist.user_id === currentUser || likedPlaylists.includes(playlist.id.toString())
+    );
+
     return (
       <div className="user-data-directory">
-        <Link to="/">
-            <img id="snl" src="https://i.ibb.co/x6s4mq2/imageedit-8-3299548283.png" alt="sl" />
-          </Link>
+        <Link id="sidebar-logo-link"to="/">
+          <img id="sidebar-logo" src="https://i.postimg.cc/8CTCNWHV/imageedit-8-3299548283.png" />
+        </Link>
 
         <div className="sidebar-directory">
           <button className={location === "" ? "selected-sidebar-button": "sidebar-button"} onClick={() => this.props.history.push('/')}>
-              <i className="medium material-icons">Home</i>
+          <i class="fa-solid fa-user"></i>
+              <p className="sb-home">Home</p>
           </button>
 
           <button className={location === "search" ? "selected-sidebar-button": "sidebar-button"} onClick={() => this.props.history.push('/search')}>
-              <i className="medium material-icons">Search</i>
+              <i class="fa-solid fa-house"></i>
+              <p className='sb-search'>Search</p>
           </button>
 
           <button className={location === "library" && pageId !== "songs" ? "selected-sidebar-button": "sidebar-button"} onClick={() => this.props.history.push('/library/playlists')}>
-              <i className="medium material-icons">Your Library</i>
+          <i class="fa-solid fa-house"></i>
+              <p className='sb-library'>Your Library</p>
           </button>
         </div>
 
@@ -59,28 +66,27 @@ class Sidebar extends React.Component {
           <span id="sidebar-divider">PLAYLISTS</span>
           <button className="library-button" onClick={this.handleCreate}>
               <i id="plus-square" className="fas fa-plus-square"></i>
-              <p>Create Playlist</p>
+              <p className='sb-create'>Create Playlist</p>
           </button> 
 
           <button className="library-button" onClick={() => this.props.history.push('/library/songs')}>
             <img id="liked-songs-icon" src={window.likedSongsIcon} />
-            <p id="liked-">Liked Songs</p>
+            <p className="sb-liked" id="liked-">Liked Songs</p>
           </button> 
         </div>
 
         <div id="line-break"></div>
         
         <ul className="playlist-links">
-          {/* {userPlaylists.slice(0).reverse().map(playlist => */}
-            {/* <li className="playlist-link" key={playlist.id}> */}
-              {/* <Link to={`/playlists/${playlist.id}`}> */}
-                {/* <div className="sidebar-playlist-item"> */}
-                <div>
-                  {/* {Playlist.name} */}
+          {userPlaylists.slice(0).reverse().map(playlist =>
+            <li className="playlist-link" key={playlist.id}>
+              <Link to={`/playlists/${playlist.id}`}>
+                <div className="sidebar-playlist-item">
+                  {playlist.name}
                 </div>
-              {/* </Link> */}
-            {/* </li> */}
-          {/* )} */}
+              </Link>
+            </li>
+          )}
         </ul>
       </div>
     );

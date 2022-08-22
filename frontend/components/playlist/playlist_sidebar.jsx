@@ -19,5 +19,3 @@ const PlaylistSidebar = ({ playlists, currentUser }) => {
 };
 
 export default PlaylistSidebar;
-
-

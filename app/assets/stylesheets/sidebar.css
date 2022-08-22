@@ -190,6 +190,11 @@ ul.playlist-links::-webkit-scrollbar-thumb {
   color: #9f9f9f
 }
 
+.sb-home, .sb-search, .sb-library, .sb-create, .sb-liked{
+  font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+}
+
+
 .sidebar-playlist-item {
   padding: 15px 0px 1px 14px;
   font-weight: 100;

@@ -2,6 +2,12 @@ import { connect } from "react-redux";
 import { withRouter } from 'react-router-dom';
 import LibraryItem from "./library_item";
 
+import {
+  playSong,
+  pauseSong,
+  fetchLibraryItem
+} from '../../actions/playbar_actions';
+
 const mSTP = state => {
   const { songs } = state.entities;
 

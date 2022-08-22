@@ -11,9 +11,7 @@ class PlaylistItem extends React.Component {
     }
   }
 
-
   render() {
-
     const { playlists, songs, users, currentUser } = this.props;
 
     return (

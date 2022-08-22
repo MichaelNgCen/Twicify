@@ -1,0 +1,351 @@
+.signup, .login {
+  text-align: center;
+  background: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+#signup-logo {
+  width: 140px;
+  height: auto;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+#login-logo {
+  width: 195px;
+  height: auto;
+  margin-top: 23px;
+  margin-bottom: 13px;
+}
+
+button:focus, input, select {
+  outline:0;
+}
+
+#header-border {
+  display: block;
+  margin-top: 9px;
+}
+
+#signup-form-heading {
+  font-weight: 500;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+  margin: 13px auto;
+}
+
+#login-form-heading {
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  padding: 15px;
+  text-align: center;
+  margin-top: 22px;
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-container, .policies {
+  box-sizing: border-box;
+  width: 450px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0px 0px 21px 0px;
+}
+
+.form-prompt, #birthday-prompt {
+  box-sizing: border-box;
+  width: 290px;
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+#birthday-prompt {
+  box-sizing: border-box;
+  width: 450px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0px 0px 21px 0px;
+}
+
+.day-input, .year-input, .day-input-error, .year-input-error {
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 45px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+  padding: 0px 0px 0px 10px;
+  margin-left: 27px;
+}
+
+.day-input, .day-input-error {
+  width: 77px;
+}
+
+.year-input, .year-input-error {
+  width: 100px;
+}
+
+.day-input-error, .year-input-error, .input-error {
+  border: 1px solid #E22235;
+}
+
+.signup-input, .login-input, .input-error {
+  border-radius: 5px;
+  width: 434px;
+  height: 45px;
+  margin: 0 auto;
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+  padding: 0px 0px 0px 10px;
+}
+
+.signup-input, .login-input {
+  border: 1px solid #BDBDBD;
+}
+
+select, .month-error {
+  border-radius: 5px;
+  height: 47px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+  color: #757575;
+  padding: 0px 0px 0px 8px;
+  width: 194px;
+}
+
+select {
+  border: 1px solid #BDBDBD;
+}
+
+.month-error {
+  border: 1px solid #E22235;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+  color: #757575;
+  font-size: 13px;
+  font-family: 'Rubik', sans-serif;  
+}
+
+.error-message {
+  box-sizing: border-box;
+  width: 450px;
+  text-align: left;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: #e22235;
+  margin-top: 8px;
+}
+
+div#login-error-container {
+  margin-top: -19px;
+}
+
+div#login-error-pending {
+  margin-top: 33px;
+}
+
+.login-error-message {
+  box-sizing: border-box;
+  /* text-align: center; */
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: white;
+  margin-top: 8px;
+  background: #E22235;
+  margin-bottom: 20px;
+  margin: 18px auto;
+  width: 450px;
+  height: 42px;
+  padding: 15px;
+}
+
+.username-notice {
+  box-sizing: border-box;
+  width: 292px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.signup-radios {
+  display: flex;
+  align-content: flex-start;
+  height: 13px;
+  margin: -4px 0px 23px 0px;
+}
+
+.gender-radio {
+  box-sizing: border-box;
+  width: 90px;
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-left: 4px;
+}
+
+label {
+  margin: 0px 0px 5px 2px;
+}
+
+input[type="radio"] {
+  margin-top: -2px;
+  margin-right: 9px;
+  margin-left: -1px;
+  vertical-align: middle;
+}
+
+.birthday-container {
+  box-sizing: border-box;
+  width: 450px;
+  margin: 0 auto;
+  padding: 0px 0px 21px 0px;
+}
+
+.birthday-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-sizing: border-box;
+  width: 450px;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+  margin-bottom: 13px;
+  margin-top: -7px;
+}
+
+#month-label {
+  margin-left: -87px;
+}
+
+#day-label {
+  margin-right: -87px;
+}
+
+#year-label {
+  margin-right: -11px;
+}
+
+#signup-submit-button, #demo-button-login, #demo-button-signup, #login-button, #signup-button {
+  border-radius: 26px;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 13px;
+  height: 47px;
+  width: 450px;
+  margin: 3px auto;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+#signup-submit-button, #login-button {
+  border: 0px;
+  background-color: #1DB954;
+  color: white;
+}
+
+#signup-submit-button:hover {
+  transform: scale(1.02);
+  background: #1ec95a;
+}
+
+#login-button:hover {
+  background: #1ec95a;
+}
+
+#signup-button {
+  background-color: white;
+  color: #616467;
+  border: 2px solid #616467;
+}
+
+#signup-button:hover {
+  background-color: #616467;
+  color: white;
+  border: 1.5px solid #616467;
+  transition: all .3s ease-in-out;
+}
+
+#demo-button-signup, #demo-button-login {
+  border: 0px;
+  background-color: #3B5998;
+  color: white;
+}
+
+#demo-button-signup:hover {
+  transform: scale(1.02);
+  background: #4669b5;
+}
+
+#demo-button-login:hover {
+  background: #4669b5;
+}
+
+#login-redirect {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  margin: 30px auto;
+  margin-bottom: 150px;
+}
+
+#login-redirect a:link {
+  color: #1bb14f
+}
+
+#login-redirect a:visited {
+  color: #1bb14f
+}
+
+#login-redirect a:hover {
+  transform: scale(1.02);
+  transition: all .2s ease-in-out;
+  color: #1ec95a;
+}
+
+
+#bottom-border {
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0, 0.14);
+  margin: auto;
+  width: 450px;
+  margin-top: 37px;
+  margin-bottom: -2px;
+}
+
+#signup-link-heading {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  text-align: center;
+  padding: 39px 0px 18px 0px;
+}
+
+.policies {
+  font-size: 12.1px;
+  color: #757575;
+  letter-spacing: 0.5px;
+}
+
+#toc {
+  margin-bottom: 10px;
+}
