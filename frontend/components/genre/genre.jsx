@@ -15,14 +15,14 @@ class Genre extends React.Component {
     const genre = pathName[2];
 
     switch (genre) {
-      case "hiphop":
-        return "Hip hop"
-      case "pop":
-        return "Pop"
+      case "kpop":
+        return "K-Pop";
+      case "rap":
+        return "Rap"
       case "rock":
         return "Rock"
-      case "rnb":
-        return "R&B"
+      case "anime":
+        return "Anime"
       default:
         break;
     }

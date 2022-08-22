@@ -9,15 +9,15 @@ export const receiveGenre = payload => {
   }
 }
 
-export const fetchHipHop = () => dispatch => {
-  return GenreAPIUtil.fetchHipHop()
+export const fetchKpop = () => dispatch => {
+  return GenreAPIUtil.fetchKpop()
     .then(
       genre => dispatch(receiveGenre(genre))
     )
 }
 
-export const fetchPop = () => dispatch => {
-  return GenreAPIUtil.fetchPop()
+export const fetchRap = () => dispatch => {
+  return GenreAPIUtil.fetchRap()
     .then(
       genre => dispatch(receiveGenre(genre))
     )
@@ -30,8 +30,8 @@ export const fetchRock = () => dispatch => {
     )
 }
 
-export const fetchRnb = () => dispatch => {
-  return GenreAPIUtil.fetchRnb()
+export const fetchAnime = () => dispatch => {
+  return GenreAPIUtil.fetchAnime()
     .then(
       genre => dispatch(receiveGenre(genre))
     )

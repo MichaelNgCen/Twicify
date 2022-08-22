@@ -1,19 +1,19 @@
-export const fetchHipHop = () => {
+export const fetchKpop = () => {
   return $.ajax({
     method: 'GET',
     url: 'api/genres/-1',
     data: {
-      genre: "Hip hop"
+      genre: "K-pop"
     }
   })
 };
 
-export const fetchPop = () => {
+export const fetchRap = () => {
   return $.ajax({
     method: "GET",
     url: 'api/genres/-1',
     data: {
-      genre: "Pop"
+      genre: "Rap"
     }
   })
 };
@@ -28,12 +28,12 @@ export const fetchRock = () => {
   })
 };
 
-export const fetchRnb = () => {
+export const fetchAnime = () => {
   return $.ajax({
     method: "GET",
     url: 'api/genres/-1',
     data: {
-      genre: "R&B"
+      genre: "Anime"
     }
   })
 };

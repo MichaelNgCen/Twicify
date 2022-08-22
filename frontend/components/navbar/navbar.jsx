@@ -82,14 +82,14 @@ class Navbar extends React.Component {
           this.props.receiveSearchPage();
         }
       case "genres":
-        if (pageId === "hiphop") {
-          this.props.fetchHipHop(currentUserId).then(() => this.renderContent());
-        } else if (pageId === "pop") {
-          this.props.fetchPop(currentUserId).then(() => this.renderContent());
+        if (pageId === "kpop") {
+          this.props.fetchKpop(currentUserId).then(() => this.renderContent());
+        } else if (pageId === "rap") {
+          this.props.fetchRap(currentUserId).then(() => this.renderContent());
         } else if (pageId === "rock") {
           this.props.fetchRock(currentUserId).then(() => this.renderContent());
-        } else if (pageId === "rnb") {
-          this.props.fetchRnb(currentUserId).then(() => this.renderContent());
+        } else if (pageId === "Anime") {
+          this.props.fetchAnime(currentUserId).then(() => this.renderContent());
         }
       default:
         if (location === "") {
@@ -156,14 +156,14 @@ class Navbar extends React.Component {
             this.props.receiveSearchPage();
           }
         case "genres":
-          if (pageId === "hiphop") {
-            this.props.fetchHipHop().then(() => this.renderContent());
-          } else if (pageId === "pop") {
-            this.props.fetchPop().then(() => this.renderContent());
+          if (pageId === "kpop") {
+            this.props.fetchKpop().then(() => this.renderContent());
+          } else if (pageId === "rap") {
+            this.props.fetchRap().then(() => this.renderContent());
           } else if (pageId === "rock") {
             this.props.fetchRock().then(() => this.renderContent());
-          } else if (pageId === "rnb") {
-            this.props.fetchRnb().then(() => this.renderContent());
+          } else if (pageId === "anime") {
+            this.props.fetchAnime().then(() => this.renderContent());
           }
         default:
           if (location === "") {
@@ -209,14 +209,14 @@ class Navbar extends React.Component {
           this.setState({ content: null });
         }
       case "genres":
-        if (pageId === "hiphop") {
-          this.setState({content: "Hip hop" });
-        } else if (pageId === "pop") {
-          this.setState({ content: "Pop" });
+        if (pageId === "kpop") {
+          this.setState({content: "K-pop" });
+        } else if (pageId === "rap") {
+          this.setState({ content: "Rap" });
         } else if (pageId === "rock") {
           this.setState({ content: "Rock" });
-        } else if (pageId === "rnb") {
-          this.setState({ content: "R&B" });
+        } else if (pageId === "anime") {
+          this.setState({ content: "Anime" });
         }
         break;
       default:

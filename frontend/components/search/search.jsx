@@ -51,21 +51,21 @@ class Search extends React.Component {
 
           <div className="search-index">
             <div
-              id="hiphop"
-              onClick={() => history.push('/genres/hiphop')}
-              className="genre-button">Hip hop</div>
+              id="kpop"
+              onClick={() => history.push('/genres/kpop')}
+              className="genre-button">K-pop</div>
             <div
-              id="pop"
-              onClick={() => history.push('/genres/pop')}
-              className="genre-button">Pop</div>
+              id="rap"
+              onClick={() => history.push('/genres/rap')}
+              className="genre-button">Rap</div>
             <div
               id="rock"
               onClick={() => history.push('/genres/rock')}
               className="genre-button">Rock</div>
             <div
-              id="rnb"
-              onClick={() => history.push('/genres/rnb')}
-              className="genre-button">R&B</div>
+              id="anime"
+              onClick={() => history.push('/genres/anime')}
+              className="genre-button">Anime</div>
           </div>
         </div>
 

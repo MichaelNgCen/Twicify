@@ -324,7 +324,7 @@ class Playbar extends React.Component {
     switch (this.state.loop) {
       case 0:
         return (
-          <span id="repeat" className="material-icons">repeat</span>
+          <span id="repeat" className="material-icons"></span>
         )
       case 1:
         return (
@@ -439,7 +439,7 @@ class Playbar extends React.Component {
             <div
               className="playbar-control-button-container"
               onClick={this.handlePrev}>
-              <span id="back" className="material-icons">skip_previous</span>
+              {/* <span id="back" className="material-icons">skip_previous</span> */}
             </div>
 
             {pauseOrPlay}
@@ -447,7 +447,7 @@ class Playbar extends React.Component {
             <div
               className="playbar-control-button-container"
               onClick={this.handleNext}>
-              <span id="forward" className="material-icons">skip_next</span>
+              {/* <span id="forward" className="material-icons">skip_next</span> */}
             </div>
 
             <div

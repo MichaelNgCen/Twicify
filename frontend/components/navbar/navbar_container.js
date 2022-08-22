@@ -14,10 +14,10 @@ import {
 } from '../../actions/playbar_actions';
 
 import {
-  fetchHipHop,
-  fetchPop,
+  fetchKpop,
+  fetchRap,
   fetchRock,
-  fetchRnb
+  fetchAnime
 } from "../../actions/genre_actions";
 
 import {
@@ -71,10 +71,10 @@ const mDTP = dispatch => {
     fetchSearchResults: query => dispatch(fetchSearchResults(query)),
     fetchHome: () => dispatch(fetchHome()),
     fetchPage: (pageQueue, location) => dispatch(fetchPage(pageQueue, location)),
-    fetchHipHop: () => dispatch(fetchHipHop()),
-    fetchPop: () => dispatch(fetchPop()),
+    fetchKpop: () => dispatch(fetchKpop()),
+    fetchRap: () => dispatch(fetchRap()),
     fetchRock: () => dispatch(fetchRock()),
-    fetchRnb: () => dispatch(fetchRnb()),
+    fetchAnime: () => dispatch(fetchAnime()),
     fetchPlaylist: id => dispatch(fetchPlaylist(id)),
     fetchArtist: id => dispatch(fetchArtist(id)),
     fetchAlbum: id => dispatch(fetchAlbum(id)),

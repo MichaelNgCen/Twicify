@@ -20,6 +20,7 @@ user1 = User.create!(username: "kimDahyun", password: "JennieKim", email: "demoe
 user2 = User.create!(username: "Michael Ng Cen", password: "kimdahyun", email: "michaelngcen@yahoo.com", email_confirmation: "michaelngcen@yahoo.com", gender: "M", birthday:"1998/04/15")
 
 artist1 = Artist.create!(name: "Le Serrafim", bio: "The group consists of five members: Sakura, Kim Chae-won, Huh Yun-jin, Kazuha and Hong Eun-chae. Originally a sextet, Kim Ga-ram was removed from the group on July 20, 2022, after the termination of her exclusive contractn\n")
+artist1.photos.attach(io: artist1_portrait, filename: 'lsf.jpg')
 album1 = Album.create!(title: "FEARLESS", artist: artist1, year: 2022, single: false, genre: "Hip hop", duration: 848)
 song1 = Song.create!(title: "The World Is My Oyster", track_num: 1, duration: 106, album_id: album1.id)
 song2 = Song.create!(title: "Fearless", track_num: 2, duration: 168, album_id: album1.id)

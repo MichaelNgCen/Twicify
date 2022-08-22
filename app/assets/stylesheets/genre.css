@@ -1,9 +1,9 @@
-#hiphop {
+#kpop {
   background: rgb(147,93,20);
   background: linear-gradient(0deg, rgba(147,93,20,1) 0%, rgba(244,154,35,1) 100%);
 }
 
-#pop {
+#rap {
   background: rgb(118,145,121);
   background: linear-gradient(0deg, rgba(118,145,121,1) 0%, rgba(194,239,199,1) 100%);
 }
@@ -13,7 +13,7 @@
   background: linear-gradient(0deg, rgba(141,18,30,1) 0%, rgba(234,35,50,1) 100%);
 }
 
-#rnb {
+#anime {
   background: rgb(145,33,99);
   background: linear-gradient(0deg, rgba(145,33,99,1) 0%, rgba(239,55,165,1) 100%);
 }
