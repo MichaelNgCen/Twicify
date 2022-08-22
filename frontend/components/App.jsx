@@ -12,7 +12,6 @@ import SignupContainer from "./session/signup_container";
 import SplashContainer from "./splash/splash_container";
 import Alert from './alert';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-// import PageNotFound from '../../public/404';
 
 const App = () => (
   <div id="app">
@@ -21,7 +20,6 @@ const App = () => (
       <AuthRoute path="/login" component={LoginContainer} />
       <AuthRoute path="/signup" component={SignupContainer} />
       <Route path="/" component={SplashContainer}/>
-      {/* <Route path="*" component={PageNotFound} /> */}
     </Switch>
     <Alert />
   </div>
