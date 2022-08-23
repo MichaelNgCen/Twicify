@@ -216,6 +216,7 @@ input.search-input {
 }
 
 i.medium.material-icons {
+  /* margin-top: 2.35vw; */
   margin-right: 10px;
   margin-left: 6px;
   font-size: 35px;

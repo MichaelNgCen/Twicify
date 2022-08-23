@@ -32,27 +32,49 @@ artist8 = Artist.create!(name: "Bring Me The Horizon", bio: "British rock band f
 artist9 = Artist.create!(name: "Ikimonogakari", bio: "Japanese pop rock duo from Kanagawa Prefecture, Japan consisting of Yoshiki Mizuno and Kiyoe Yoshioka.\n")
 
 # Image for Le Serrafim
-artist1_portrait = Artist.first.photos.attach(io: File.open("/Users/michaelngcen/Desktop/twicify/app/assets/images/lsf.jpg"), filename: "lsf.jpg")
-artist1_banner = Artist.first.photos.attach(io: File.open("/Users/michaelngcen/Desktop/twicify/app/assets/images/lsf_banner.jpg"), filename: "lsf_banner.jpg")
-artist1_bio_photo = Artist.first.photos.attach(io: File.open("/Users/michaelngcen/Desktop/twicify/app/assets/images/lsf_bio.jpg"), filename: "lsf_bio.jpg")
+artist1_portrait = Artist.first.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/lsf.jpg"), filename: "lsf.jpg")
+# artist1_banner = Artist.first.photos.attach(io: URI.open("/Users/michaelngcen/Desktop/twicify/app/assets/images/lsf_banner.jpg"), filename: "lsf_banner.jpg")
+# artist1_bio_photo = Artist.first.photos.attach(io: URI.open("/Users/michaelngcen/Desktop/twicify/app/assets/images/lsf_bio.jpg"), filename: "lsf_bio.jpg")
+
+# Image for Twice
+artist2_portrait = Artist.second.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/twice.jpg"), filename: "twice.jpg")
+
+# Image for Blackpink
+artist3_portrait = Artist.third.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bp.jpg"), filename: "bp.jpg")
+
+# Image for IVE
+artist4_portrait = Artist.fourth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/ive.jpg"), filename: "ive.jpg")
+
+# Image for aespa
+artist5_portrait = Artist.fifth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa.jpg"), filename: "aespa.jpg")
 
 # Image for Jennie
-artist6_portrait = Artist.find_by(name: "JENNIE").photos.attach(io: File.open("/Users/michaelngcen/Desktop/twicify/app/assets/images/jennie.jpg"), filename: "jennie.jpg")
-artist6_banner = Artist.find_by(name: "JENNIE").photos.attach(io: File.open("/Users/michaelngcen/Desktop/twicify/app/assets/images/jennieBanner.jpg"), filename: "jennieBanner.jpg")
+artist6_portrait = Artist.find_by(name: "JENNIE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/jennie.jpg"), filename: "jennie.jpg")
+# artist6_banner = Artist.find_by(name: "JENNIE").photos.attach(io: URI.open("/Users/michaelngcen/Desktop/twicify/app/assets/images/jennieBanner.jpg"), filename: "jennieBanner.jpg")
+
+# Image for Kanye
+artist7_portrait = Artist.find_by(name: "Kanye West").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/kanye.jpg"), filename: "kanye.jpg")
+
+# Image for Bring Me The Horizon
+artist8_portrait = Artist.find_by(name: "Bring Me The Horizon").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bmth.jpg"), filename: "bmth.jpg")
+
+# Image for Ikimonogakari
+artist9_portrait = Artist.find_by(name: "Ikimonogakari").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/Ikimonogakari.jpg"), filename: "ikimonogakari.jpg")
 
 #le Serrafim albums
 album1 = Album.create!(title: "FEARLESS", artist: artist1, year: 2022, single: false, genre: "K-pop", duration: 848)
-album1_cover = Album.first.cover_art.attach(io: File.open("/Users/michaelngcen/Desktop/twicify/app/assets/images/lsf_banner.jpg"), filename: "lsf_banner.jpg")
+album1_cover = Album.first.cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/lsf_banner.jpg"), filename: "lsf_banner.jpg")
 song1 = Song.create!(title: "The World Is My Oyster", track_num: 1, duration: 106, album_id: album1.id)
 song2 = Song.create!(title: "Fearless", track_num: 2, duration: 168, album_id: album1.id)
 song3 = Song.create!(title: "Blue Flame", track_num: 3, duration: 201, album_id: album1.id)
 song4 = Song.create!(title: "The Great Mermaid", track_num: 4, duration: 177, album_id: album1.id)
 song5 = Song.create!(title: "Sour Grapes", track_num: 5, duration: 196, album_id: album1.id)
-Song.find_by(title:'Fearless').audio_file.attach(io: File.open("/Users/michaelngcen/Desktop/twicify/app/assets/audio/FEARLESS.mp3"), filename: "FEARLESS.mp3")
+# Song.find_by(title:'Fearless').audio_file.attach(io: URI.open("/Users/michaelngcen/Desktop/twicify/app/assets/audio/FEARLESS.mp3"), filename: "FEARLESS.mp3")
 
 
 #twice Album
 album2 = Album.create!(title: "FANCY YOU", artist: artist2, year: 2019, single: false, genre: "K-pop", duration: 848)
+album2_cover = Album.second.cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/twice_ca.jpg"), filename: "twice_ca.jpg")
 song6 = Song.create!(title: "FANCY", track_num: 1, duration: 213, album_id: album2.id)
 song7 = Song.create!(title: "STUCK IN MY HEAD", track_num: 2, duration: 176, album_id: album2.id)
 song8 = Song.create!(title: "GIRLS LIKE US", track_num: 3, duration: 158, album_id: album2.id)
@@ -62,6 +84,7 @@ song11 = Song.create!(title: "STRAWBERRY", track_num: 6, duration: 209, album_id
 
 #blackpink album
 album3 = Album.create!(title: "THE ALBUM", artist: artist3, year: 2020, single: false, genre: "K-pop", duration: 1280)
+album3_cover = Album.third.cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bp_ca.jpg"), filename: "bp_ca.jpg")
 song12 = Song.create!(title: "How You Like That", track_num: 1, duration: 182, album_id: album3.id)
 song13 = Song.create!(title: "Ice Cream (with Selena Gomez)", track_num: 2, duration: 177, album_id: album3.id)
 song14 = Song.create!(title: "Pretty Savage", track_num: 3, duration: 201, album_id: album3.id)
@@ -73,19 +96,23 @@ song19 = Song.create!(title: "You Never Know", track_num: 8, duration: 231, albu
 
 #IVE album
 album4 = Album.create!(title: "ELEVEN", artist: artist4, year: 2022, single: true, genre: "K-pop", duration: 382)
+album4_cover = Album.fourth.cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/ive_ca.jpg"), filename: "ive_ca.jpg")
 song20 = Song.create!(title: "ELEVEN", track_num: 1, duration: 178, album_id: album4.id)
 song21 = Song.create!(title: "Take It", track_num: 2, duration: 204, album_id: album4.id)
 
 #aespa album
 album5 = Album.create!(title: "Black Mamba", artist: artist5, year: 2020, single: true, genre: "K-pop", duration: 174)
+album5_cover = Album.fifth.cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa_ca.jpg"), filename: "aespa_ca.jpg")
 song22 = Song.create!(title: "Black Mamba", track_num: 1, duration: 174, album_id: album5.id)
 
 # JENNIE Album
 album6 = Album.create!(title: "SOLO", artist: artist6, year: 2018, single: true, genre: "K-pop", duration: 169)
+album6_cover = Album.find_by(title: "SOLO").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/jennie_ca.jpg"), filename: "jennie_ca.jpg")
 song23 = Song.create!(title: "SOLO", track_num: 1, duration: 169, album_id: album6.id)
 
 #KW album
 album7 = Album.create!(title: "808s & Heartbreak", artist: artist7, year: 2008, single: false, genre: "Rap", duration: 3119)
+album7_cover = Album.find_by(title: "808s & Heartbreak").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/kw_ca.jpg"), filename: "kw_ca.jpg")
 song24 = Song.create!(title: "Say You Will", track_num: 1, duration: 377, album_id: album7.id)
 song25 = Song.create!(title: "Welcome To Heartbreak", track_num: 2, duration: 262, album_id: album7.id)
 song26 = Song.create!(title: "Heartless", track_num: 3, duration: 211, album_id: album7.id)
@@ -101,6 +128,7 @@ song35 = Song.create!(title: "Pinocchio Story", track_num: 12, duration: 361, al
 
 #BMTH Album
 album8 = Album.create!(title: "This Is What The Edge Of Your Seat Was Made For", artist: artist8, year: 2004, single: false, genre: "Rock", duration: 1106)
+album8_cover = Album.find_by(title: "This Is What The Edge Of Your Seat Was Made For").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bmth_ca.jpg"), filename: "bmth_ca.jpg")
 song36 = Song.create!(title: "re: they have no reflections", track_num: 1, duration: 342, album_id: album8.id)
 song37 = Song.create!(title: "who wants flowers when you're dead? nobody", track_num: 2, duration: 294, album_id: album8.id)
 song38 = Song.create!(title: "RAWWWRR!", track_num: 3, duration: 253, album_id: album8.id)   
@@ -108,13 +136,32 @@ song39 = Song.create!(title: "Traitor never Play Hang-man.", track_num: 4, durat
 
 #Blue Bird
 album9 = Album.create!(title: "Chou Ikimonobakari Tennen Kinen Members Best Selection", artist: artist9, year: 2006, single: true, genre: "Anime", duration: 215)
+album9_cover = Album.find_by(title: "Chou Ikimonobakari Tennen Kinen Members Best Selection").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/blue_bird_ca.jpg"), filename: "blue_bird_ca.jpg")
 song40 = Song.create!(title: "ブルーバード", track_num: 1, duration: 215, album_id: album9.id)
 
 #PLAYLISTS
-playlist1 = Playlist.create!(user_id: user1.id, name: "Girl Krush!", description: "Girl Crush", private: "false")
+playlist1 = Playlist.create!(user_id: user1.id, name: "Girl Krush!", description: "All your girl crushes in one place.", private: "false")
+playlist1_picture = Playlist.first.photo.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/girlKrush.png"), filename: "girlKrush.png")
 playlistSong1 = PlaylistSong.create!(playlist_id: playlist1.id, song_id: song6.id)
+
+playlist2 = Playlist.create!(user_id: user1.id, name: "WOR K OUT", description: "Workout to K-Pop? Count me in! ", private: "false")
+playlist2_picture = Playlist.second.photo.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/worKout.png"), filename: "worKout.png")
+
+playlist3 = Playlist.create!(user_id: user1.id, name: "KimBops", description: "Rolling with the 'bops' in your Kimbap. Bringing you the songs that are currently trending and everything else in between", private: "false")
+playlist3_picture = Playlist.third.photo.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/kimbops.png"), filename: "kimbops.png")
+
+playlist4 = Playlist.create!(user_id: user1.id, name: "Summer K-Pop Hits", description: "Be cool with refreshing Tropical K-Pop dance music!", private: "false")
+playlist4_picture = Playlist.fourth.photo.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/sh.png"), filename: "sh.png")
+
+playlist5 = Playlist.create!(user_id: user1.id, name: "Nolja!", description: "Time to press play on these jaem jams from 2010 onwards!", private: "false")
+playlist5_picture = Playlist.fifth.photo.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/nolja.png"), filename: "nolja.png")
 
 #Create Likes
 Like.create!(user_id: user1.id, likable_id: playlist1.id, likable_type: "Playlist")
+Like.create!(user_id: user1.id, likable_id: playlist2.id, likable_type: "Playlist")
+Like.create!(user_id: user1.id, likable_id: playlist3.id, likable_type: "Playlist")
+Like.create!(user_id: user1.id, likable_id: playlist4.id, likable_type: "Playlist")
+Like.create!(user_id: user1.id, likable_id: playlist5.id, likable_type: "Playlist")
+
 Like.create!(user_id: user1.id, likable_id: artist1.id, likable_type: "Artist")
 Like.create!(user_id: user1.id, likable_id: album6.id, likable_type: "Album")

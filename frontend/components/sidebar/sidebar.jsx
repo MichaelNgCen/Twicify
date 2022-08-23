@@ -49,17 +49,17 @@ class Sidebar extends React.Component {
         <div className="sidebar-directory">
           <button className={location === "" ? "selected-sidebar-button": "sidebar-button"} onClick={() => this.props.history.push('/')}>
           <i className="medium material-icons">home</i>
-              <p>Home</p>
+              <p className='sh'>Home</p>
           </button>
 
           <button className={location === "search" ? "selected-sidebar-button": "sidebar-button"} onClick={() => this.props.history.push('/search')}>
           <i className="medium material-icons">search</i>
-              <p>Search</p>
+              <p className='ss'>Search</p>
           </button>
 
           <button className={location === "library" && pageId !== "songs" ? "selected-sidebar-button": "sidebar-button"} onClick={() => this.props.history.push('/library/playlists')}>
           <i className="medium material-icons">library_music</i>
-              <p>Your Library</p>
+              <p className='yl'>Your Library</p>
           </button>
         </div>
 

@@ -62,3 +62,16 @@ h1.genre-page-title {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+.yl, .sh, .ss {
+  /* margin-right: 50vw; */
+  font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.sb-create{
+  font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+  font-weight: 700;
+  font-size: 0.5125rem;
+}
