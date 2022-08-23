@@ -1,21 +1,26 @@
 #kpop {
-  background: rgb(147,93,20);
-  background: linear-gradient(0deg, rgba(147,93,20,1) 0%, rgba(244,154,35,1) 100%);
+  background-color: #00DBDE;
+  background-image: linear-gradient(43deg, #00DBDE 0%, #FC00FF 100%);
+  
 }
-
 #rap {
-  background: rgb(118,145,121);
-  background: linear-gradient(0deg, rgba(118,145,121,1) 0%, rgba(194,239,199,1) 100%);
+  background-color: #FA8BFF;
+  background-image: linear-gradient(43deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  
 }
 
 #rock {
-  background: rgb(141,18,30);
-  background: linear-gradient(0deg, rgba(141,18,30,1) 0%, rgba(234,35,50,1) 100%);
+  background-color: #3EECAC;
+  background-image: linear-gradient(43deg, #3EECAC 0%, #EE74E1 100%);
+  
+  
+  
 }
 
 #anime {
-  background: rgb(145,33,99);
-  background: linear-gradient(0deg, rgba(145,33,99,1) 0%, rgba(239,55,165,1) 100%);
+  background-color: #A9C9FF;
+  background-image: linear-gradient(43deg, #A9C9FF 0%, #FFBBEC 100%);
+  
 }
 
 .genre-page-container {

@@ -1851,8 +1851,8 @@ var Artist = /*#__PURE__*/function (_React$Component) {
           albums = _this$props4.albums,
           songs = _this$props4.songs,
           loading = _this$props4.loading;
-      if (loading || !playlists || !artist || !albums || !songs) return null;
-      var artistPlaylistIds = artist.playlist_ids;
+      if (loading || !playlists || !artist || !albums || !songs) return null; // const artistPlaylistIds = artist.playlist_ids;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "main-content"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -1906,22 +1906,6 @@ var Artist = /*#__PURE__*/function (_React$Component) {
           itemLocation: album.itemLocation,
           key: idx,
           itemType: "Album"
-        });
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-        className: artistPlaylistIds.length > 0 ? "artist-playlists" : "hidden"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-        className: "artist-title"
-      }, "Playlists featuring ", artist.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-        className: "library-index"
-      }, Object.values(playlists).filter(function (playlist) {
-        return artistPlaylistIds.includes(playlist.id);
-      }).map(function (playlist, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_library_library_item_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          id: playlist.id,
-          playlist: playlist,
-          itemLocation: playlist.itemLocation,
-          key: idx,
-          itemType: "Playlist"
         });
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "artist-bio-button-container"
@@ -2206,6 +2190,10 @@ var Genre = /*#__PURE__*/function (_React$Component) {
           albums = _this$props.albums;
       var pathName = this.props.location.pathname.split('/');
       var genre = pathName[2];
+      {
+        console.log(artists);
+      }
+      ;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "genre-page-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -2357,7 +2345,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
         id: "home-header"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
         className: "genre-page-title"
-      }, this.state.curTime < 12 ? "Good Morning" : "", this.state.curTime >= 12 && this.state.curTime < 17 ? "Good Afternoon" : "", this.state.curTime >= 17 && this.state.curTime < 24 ? "Good Evening" : "", ", ", currentUser, "!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, this.state.curTime < 12 ? "Good Morning" : "", this.state.curTime >= 12 && this.state.curTime < 17 ? "Good Afternoon" : "", this.state.curTime >= 17 && this.state.curTime < 24 ? "Good Evening" : "", ", ", currentUser, "!")), console.log(artists), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "home-section-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "genre-section"
@@ -3902,7 +3890,6 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
 
         switch (location) {
           case "playlists":
-            // this.props.fetchPlaylist(pageId).then(() => this.renderContent());
             console.log(this.props.playlists);
             break;
 
@@ -7243,28 +7230,22 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
           return _this3.props.history.push('/');
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-        "class": "fa-solid fa-user"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-        className: "sb-home"
-      }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        className: "medium material-icons"
+      }, "home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
         className: location === "search" ? "selected-sidebar-button" : "sidebar-button",
         onClick: function onClick() {
           return _this3.props.history.push('/search');
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-        "class": "fa-solid fa-house"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-        className: "sb-search"
-      }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        className: "medium material-icons"
+      }, "search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
         className: location === "library" && pageId !== "songs" ? "selected-sidebar-button" : "sidebar-button",
         onClick: function onClick() {
           return _this3.props.history.push('/library/playlists');
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-        "class": "fa-solid fa-house"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-        className: "sb-library"
-      }, "Your Library"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "medium material-icons"
+      }, "library_music"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Your Library"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "library-buttons"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         id: "sidebar-divider"
@@ -8557,6 +8538,7 @@ var usersReducer = function usersReducer() {
       return Object.assign({}, state, action.users);
 
     case _actions_library_actions__WEBPACK_IMPORTED_MODULE_2__.REMOVE_SONG_FROM_LIBRARY:
+      // used for playbar like button when unliking from liked songs page
       return Object.assign({}, state, _defineProperty({}, action.payload.user.id, action.payload.user));
 
     default:

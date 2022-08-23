@@ -33,6 +33,7 @@ class Genre extends React.Component {
     const pathName = this.props.location.pathname.split('/');
     const genre = pathName[2];
 
+    {console.log(artists)};
     return (
       <div className="genre-page-container">
         <div

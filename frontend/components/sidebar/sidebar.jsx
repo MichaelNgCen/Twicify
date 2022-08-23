@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
+
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
@@ -47,18 +48,18 @@ class Sidebar extends React.Component {
 
         <div className="sidebar-directory">
           <button className={location === "" ? "selected-sidebar-button": "sidebar-button"} onClick={() => this.props.history.push('/')}>
-          <i class="fa-solid fa-user"></i>
-              <p className="sb-home">Home</p>
+          <i className="medium material-icons">home</i>
+              <p>Home</p>
           </button>
 
           <button className={location === "search" ? "selected-sidebar-button": "sidebar-button"} onClick={() => this.props.history.push('/search')}>
-              <i class="fa-solid fa-house"></i>
-              <p className='sb-search'>Search</p>
+          <i className="medium material-icons">search</i>
+              <p>Search</p>
           </button>
 
           <button className={location === "library" && pageId !== "songs" ? "selected-sidebar-button": "sidebar-button"} onClick={() => this.props.history.push('/library/playlists')}>
-          <i class="fa-solid fa-house"></i>
-              <p className='sb-library'>Your Library</p>
+          <i className="medium material-icons">library_music</i>
+              <p>Your Library</p>
           </button>
         </div>
 

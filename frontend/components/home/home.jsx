@@ -36,6 +36,7 @@ class Home extends React.Component {
           </h1>
         </div>
 
+        {console.log(artists)}
         <div className="home-section-container">
           <div className="genre-section">
             <h1 className="library-title">Popular Artists</h1>

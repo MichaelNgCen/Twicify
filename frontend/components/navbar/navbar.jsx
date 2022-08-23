@@ -131,7 +131,6 @@ class Navbar extends React.Component {
 
       switch (location) {
         case "playlists":
-          // this.props.fetchPlaylist(pageId).then(() => this.renderContent());
           console.log(this.props.playlists);
           break;
         case "albums": 

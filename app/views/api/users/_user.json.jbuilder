@@ -1,4 +1,4 @@
-json.extract! user, :id, :email, :username
+json.extract! user, :id, :username
 
 json.likes({playlists: {}, artists: {}, albums: {}, songs: {}})
 json.likes do

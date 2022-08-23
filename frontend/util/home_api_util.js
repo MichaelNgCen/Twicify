@@ -1,6 +1,6 @@
 export const fetchHome = () => {
-    return $.ajax({
-      method: 'GET',
-      url: 'api/home',
-    })
-  };
+  return $.ajax({
+    method: 'GET',
+    url: 'api/home',
+  })
+};

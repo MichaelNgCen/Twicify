@@ -111,7 +111,7 @@ class Artist extends React.Component {
 
     if (loading || !playlists || !artist || !albums || !songs) return null;
 
-    const artistPlaylistIds = artist.playlist_ids;
+    // const artistPlaylistIds = artist.playlist_ids;
 
     return (
       <div className="main-content">
@@ -165,7 +165,7 @@ class Artist extends React.Component {
           </div>
         </div>
 
-        <div className={artistPlaylistIds.length > 0 ? "artist-playlists" : "hidden"}>
+        {/* <div className={artistPlaylistIds.length > 0 ? "artist-playlists" : "hidden"}>  
           <h2 className="artist-title">Playlists featuring {artist.name}</h2>
           <div className="library-index">
             {Object.values(playlists).filter(playlist => artistPlaylistIds.includes(playlist.id)).map(((playlist, idx) =>
@@ -177,7 +177,7 @@ class Artist extends React.Component {
                 itemType="Playlist" />
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="artist-bio-button-container">
           <h2 className="artist-title">About</h2>
