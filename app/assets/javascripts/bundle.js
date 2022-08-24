@@ -1851,7 +1851,10 @@ var Artist = /*#__PURE__*/function (_React$Component) {
           albums = _this$props4.albums,
           songs = _this$props4.songs,
           loading = _this$props4.loading;
-      if (loading || !playlists || !artist || !albums || !songs) return null; // const artistPlaylistIds = artist.playlist_ids;
+      if (loading || !playlists || !artist || !albums || !songs) return null;
+      {
+        console.log(artist);
+      } // const artistPlaylistIds = artist.playlist_ids;
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "main-content"
@@ -1870,7 +1873,7 @@ var Artist = /*#__PURE__*/function (_React$Component) {
         className: "artist-name"
       }, artist.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
         className: "artist-banner",
-        src: artist.photos[0],
+        src: artist.photos[1],
         alt: "Artist Profile Photo"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "artist-show-controls"

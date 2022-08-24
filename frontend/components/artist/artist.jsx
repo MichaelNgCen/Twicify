@@ -111,6 +111,7 @@ class Artist extends React.Component {
 
     if (loading || !playlists || !artist || !albums || !songs) return null;
 
+    {console.log(artist)}
     // const artistPlaylistIds = artist.playlist_ids;
 
     return (
@@ -123,7 +124,7 @@ class Artist extends React.Component {
             </div>
             <h1 className="artist-name">{artist.name}</h1>
           </div>
-          <img className="artist-banner" src={artist.photos[0]} alt="Artist Profile Photo"/>
+          <img className="artist-banner" src={artist.photos[1]} alt="Artist Profile Photo"/>
         </div>
 
         <div className="artist-show-controls">

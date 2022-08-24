@@ -6,9 +6,8 @@ json.artist do
   json.partial! 'api/artists/artist', artist: @artist
   
   @artist.photos.each do |photo|
-    images << url_for(photo) if photo.attached? 
+    images << url_for(photo)
   end
-  
   json.photos images
 end
 
