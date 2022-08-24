@@ -71,7 +71,7 @@ class Sidebar extends React.Component {
           </button> 
 
           <button className="library-button" onClick={() => this.props.history.push('/library/songs')}>
-            <img id="liked-songs-icon" src={window.likedSongsIcon} />
+            <img id="liked-songs-icon" src="https://twicify-seed.s3.amazonaws.com/heart.jpg" />
             <p className="sb-liked" id="liked-">Liked Songs</p>
           </button> 
         </div>

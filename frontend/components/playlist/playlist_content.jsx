@@ -176,7 +176,6 @@ class Playlist extends React.Component {
     if (playlistSongs && playlistSongs.length === 0) {
       renderPlaylist = (
         <div className="empty-playlist">
-          {/* <i className="fas fa-compact-disc"></i> */}
           <p id="empty-playlist-title">It looks like you don't have anything in this playlist yet.</p>
           <p id="empty-playlist-text"> <Link to="/search">Search</Link> for some songs to add!</p>
         </div>
@@ -355,7 +354,7 @@ class Playlist extends React.Component {
             className={location === "playlists" ? "playlist-photo" : "hidden"}
             onClick={() => this.handleEdit(playlist.id)}
             src={(playlist && playlist.photo_url) ? playlist.photo_url : window.defaultPlaylistPicture} />
-          <img className={location === "library" ? "liked-songs-photo" : "hidden"} src={window.likedSongs} />
+          <img className={location === "library" ? "liked-songs-photo" : "hidden"} src="https://twicify-seed.s3.amazonaws.com/heart.jpg" />
 
           <div className={location === "playlists" ? "playlist-details" : "liked-songs-details"}>
             <span>PLAYLIST</span>

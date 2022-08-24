@@ -4994,10 +4994,16 @@ var Playbar = /*#__PURE__*/function (_React$Component) {
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "playbar-control-button-container",
         onClick: this.handlePrev
-      }), pauseOrPlay, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+        id: "back",
+        className: "material-icons"
+      }, "skip_previous")), pauseOrPlay, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "playbar-control-button-container",
         onClick: this.handleNext
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+        id: "forward",
+        className: "material-icons"
+      }, "skip_next")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: this.state.loop > 0 ? "loop-button-container" : "playbar-control-button-container",
         onClick: this.handleLoop
       }, this.renderLoop())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -5995,7 +6001,7 @@ var Playlist = /*#__PURE__*/function (_React$Component) {
         src: playlist && playlist.photo_url ? playlist.photo_url : window.defaultPlaylistPicture
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
         className: location === "library" ? "liked-songs-photo" : "hidden",
-        src: window.likedSongs
+        src: "https://twicify-seed.s3.amazonaws.com/heart.jpg"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: location === "playlists" ? "playlist-details" : "liked-songs-details"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "PLAYLIST"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
@@ -7266,7 +7272,7 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
         id: "liked-songs-icon",
-        src: window.likedSongsIcon
+        src: "https://twicify-seed.s3.amazonaws.com/heart.jpg"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
         className: "sb-liked",
         id: "liked-"

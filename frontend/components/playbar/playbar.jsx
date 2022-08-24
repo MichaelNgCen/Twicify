@@ -439,7 +439,7 @@ class Playbar extends React.Component {
             <div
               className="playbar-control-button-container"
               onClick={this.handlePrev}>
-              {/* <span id="back" className="material-icons">skip_previous</span> */}
+              <span id="back" className="material-icons">skip_previous</span>
             </div>
 
             {pauseOrPlay}
@@ -447,7 +447,7 @@ class Playbar extends React.Component {
             <div
               className="playbar-control-button-container"
               onClick={this.handleNext}>
-              {/* <span id="forward" className="material-icons">skip_next</span> */}
+              <span id="forward" className="material-icons">skip_next</span>
             </div>
 
             <div

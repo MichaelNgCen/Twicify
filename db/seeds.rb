@@ -68,7 +68,7 @@ artist6_bio_photo = Artist.find_by(name: "JENNIE").photos.attach(io: URI.open("h
 
 # Image for Kanye
 artist7_portrait = Artist.find_by(name: "Kanye West").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/kanye.jpg"), filename: "kanye.jpg")
-artist7_banner = Artist.find_by(name: "Kanye West").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/kanyeBanner.jpg"), filename: "kanyeBanner.jpg")
+artist7_banner = Artist.find_by(name: "Kanye West").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/kanyeBanner2.jpg"), filename: "kanyeBanner.jpg")
 artist7_bio_photo = Artist.find_by(name: "Kanye West").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/kanyeBio.jpg"), filename: "kanyeBio.jpg")
 
 # Image for Bring Me The Horizon
@@ -83,7 +83,7 @@ artist9_bio_photo = Artist.find_by(name: "Ikimonogakari").photos.attach(io: URI.
 
 # Image for IzOne
 artist10_portrait = Artist.find_by(name: "IZ*ONE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/izone.jpg"), filename: "izone.jpg")
-artist10_banner = Artist.find_by(name: "IZ*ONE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/izoneBanner.jpg"), filename: "izoneBanner.jpg")
+artist10_banner = Artist.find_by(name: "IZ*ONE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/izoneBanner3.jpg"), filename: "izoneBanner2.jpg")
 artist10_bio_photo = Artist.find_by(name: "IZ*ONE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/izoneBio.jpg"), filename: "izoneBio.jpg")
 
 # Image for Red Velvet
