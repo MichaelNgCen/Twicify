@@ -67,7 +67,6 @@ class Navbar extends React.Component {
         this.props.fetchArtist(pageId).then(() => this.renderContent());
         break;
       case "library":
-        // this.props.fetchUser(this.props.currentUserId);
         if (pageId === "songs") {
           this.props.fetchLikedSongs(currentUserId).then(() => this.renderContent());
         } else if (pageId === "playlists") {
@@ -405,7 +404,7 @@ class Navbar extends React.Component {
 
             <div className="user-dropdown-option" onClick={() => window.open("https://www.instagram.com/michaelngcen/", "_blank")} >
               <span>Instagram</span>
-                <i className="fab fa-ig"></i>
+                <i className="fab fa-instagram"></i>
             </div>
 
             <div className="user-dropdown-option" onClick={() => window.open("https://open.spotify.com/", "_blank")} >

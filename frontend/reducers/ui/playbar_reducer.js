@@ -27,14 +27,10 @@ const defaultState = {
   currentSongIndex: null,
   isShuffled: false,
   shuffleIndex: null,
-  // shuffledQueue: array of shuffled indices from currentQueue
   shuffledQueue: [],
-  // pageQueue: songId's on a given page in order
   pageQueue: [],
-  // currentQueue: songId's that are currently being played
   currentQueue: [],
   currentQueueLocation: null,
-  // userQueue: array of songId's added to queue by user
   userQueue: [],
 }
 
@@ -112,7 +108,6 @@ const playbarReducer = (state = defaultState, action) => {
       newState.pageQueue = action.payload.pageQueue;
       return newState; 
     case END_LOOP_QUEUE:
-      // Used when reaching end of page when looping all songs
       if (newState.isShuffled) {
         newState.shuffleIndex = -1;
         newState.currentSongIndex = newState.shuffledQueue[newState.shuffleIndex];
@@ -124,7 +119,6 @@ const playbarReducer = (state = defaultState, action) => {
       newState.userQueue.push(action.payload.songId);
       return newState;
     case END_QUEUE:
-      // Used when reaching end of song queue
       newState.currentSong = null;
       newState.isPlaying = false;
       newState.isShuffled = false;
@@ -135,7 +129,6 @@ const playbarReducer = (state = defaultState, action) => {
       newState.shuffledQueue = null;
       return newState;
     case BEGIN_LOOP_FROM_END:
-      // used when currentQueue is looped and user goes to previous song while on first song of queue,
       if (newState.isShuffled) {
         newState.shuffleIndex = newState.shuffledQueue.length;
       } else {

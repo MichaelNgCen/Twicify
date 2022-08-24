@@ -285,8 +285,8 @@ song53 = Song.create!(title: "Dreams Come True", track_num: 1, duration: 204, al
 
 #aespa album 5
 album33 = Album.create!(title: "Girls - The 2nd Mini Album", artist: artist5, year: 2022, single: false, genre: "K-pop", duration: 240)
-album32_cover = Album.find_by(title: "Girls - The 2nd Mini Album").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa_ca5.jpg"), filename: "aespa_ca5.jpg")
-song54 = Song.create!(title: "Girls", track_num: 1, duration: 240, album_id: album32.id)
+album33_cover = Album.find_by(title: "Girls - The 2nd Mini Album").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa_ca5.jpg"), filename: "aespa_ca5.jpg")
+song54 = Song.create!(title: "Girls", track_num: 1, duration: 240, album_id: album33.id)
 
 #PLAYLISTS
 playlist1 = Playlist.create!(user_id: user1.id, name: "Girl Krush!", description: "All your girl crushes in one place.", private: "false")

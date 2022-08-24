@@ -16,7 +16,6 @@ const usersReducer = (state = {}, action) => {
     case RECEIVE_USERS:
       return Object.assign({}, state, action.users);
     case REMOVE_SONG_FROM_LIBRARY:
-      // used for playbar like button when unliking from liked songs page
       return Object.assign({}, state, { [action.payload.user.id]: action.payload.user });
     default: 
       return state;

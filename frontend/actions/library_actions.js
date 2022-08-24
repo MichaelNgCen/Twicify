@@ -44,7 +44,6 @@ export const removeSong = payload => {
 };
 
 export const removeSongFromLibrary = song => {
-  // used when unliking songs from liked songs page
   return {
     type: REMOVE_SONG,
     song

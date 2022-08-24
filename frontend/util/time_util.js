@@ -13,7 +13,6 @@ const months = [
   "Dec"
 ];
 
-// convert units of time to milliseconds
 const second = 1000;
 const minute = second * 60;
 const hour = minute * 60;
@@ -21,7 +20,6 @@ const day = hour * 24;
 const week = day * 7;
 const month = week * 4;
 
-// convert milliseconds from renderDateAdded function back to correct units
 const convertToSeconds = (ms) => {
   return Math.floor(ms/second);
 }

@@ -46,7 +46,6 @@ class Playbar extends React.Component {
   }
 
   handlePrev() {
-    // implement modulo in the future
     const {
       beginLoopFromEnd,
       fetchPrevSong,
@@ -62,7 +61,6 @@ class Playbar extends React.Component {
     const prevSongIdx = currentQueue[currentSongIndex - 1]
 
     switch (this.state.loop) {
-      // No loop
       case 0:
         if (this.state.isShuffled) {
           const prevShuffleSongIdx = shuffledQueue[shuffleIndex - 1]
@@ -91,7 +89,6 @@ class Playbar extends React.Component {
           }
         }
         break;
-      // Repeat all in queue
       case 1:
         if (this.state.isShuffled) {
           const prevShuffleSongIdx = shuffledQueue[shuffleIndex - 1]
@@ -123,7 +120,6 @@ class Playbar extends React.Component {
             audio.currentTime = 0;
           }
         }
-      // Repeat current song
       case 2:
         const audio = document.getElementById("audio");
         this.setState({ currentTime: 0 });
@@ -135,7 +131,6 @@ class Playbar extends React.Component {
   }
 
   handleNext() {
-    // implement modulo in the future
     const {
       fetchNextSong,
       currentSong,
@@ -152,7 +147,6 @@ class Playbar extends React.Component {
     const nextSongId = currentQueue[currentSongIndex + 1]
 
     switch (this.state.loop) {
-      // No loop
       case 0:
         if (this.state.isShuffled) {
           const nextShuffleSongIdx = shuffledQueue[shuffleIndex + 1]
@@ -185,7 +179,6 @@ class Playbar extends React.Component {
           }
         }
         break;
-      // Repeat all in queue
       case 1:
         if (this.state.isShuffled) {
           const nextShuffleSongIdx = shuffledQueue[shuffleIndex + 1]
@@ -217,7 +210,6 @@ class Playbar extends React.Component {
             audio.currentTime = 0;
           }
         }
-        // Repeat current song
         case 2:
           const audio = document.getElementById("audio");
           this.setState({ currentTime: 0 });

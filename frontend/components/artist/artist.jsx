@@ -112,7 +112,6 @@ class Artist extends React.Component {
     if (loading || !playlists || !artist || !albums || !songs) return null;
 
     {console.log(artist)}
-    // const artistPlaylistIds = artist.playlist_ids;
 
     return (
       <div className="main-content">

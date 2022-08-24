@@ -300,7 +300,6 @@ var removeSong = function removeSong(payload) {
   };
 };
 var removeSongFromLibrary = function removeSongFromLibrary(song) {
-  // used when unliking songs from liked songs page
   return {
     type: REMOVE_SONG,
     song: song
@@ -1854,8 +1853,7 @@ var Artist = /*#__PURE__*/function (_React$Component) {
       if (loading || !playlists || !artist || !albums || !songs) return null;
       {
         console.log(artist);
-      } // const artistPlaylistIds = artist.playlist_ids;
-
+      }
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "main-content"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -3796,7 +3794,6 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
           break;
 
         case "library":
-          // this.props.fetchUser(this.props.currentUserId);
           if (pageId === "songs") {
             this.props.fetchLikedSongs(currentUserId).then(function () {
               return _this2.renderContent();
@@ -4257,7 +4254,7 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
           return window.open("https://www.instagram.com/michaelngcen/", "_blank");
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "Instagram"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-        className: "fab fa-ig"
+        className: "fab fa-instagram"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "user-dropdown-option",
         onClick: function onClick() {
@@ -4520,7 +4517,6 @@ var Playbar = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handlePrev",
     value: function handlePrev() {
-      // implement modulo in the future
       var _this$props = this.props,
           beginLoopFromEnd = _this$props.beginLoopFromEnd,
           fetchPrevSong = _this$props.fetchPrevSong,
@@ -4533,7 +4529,6 @@ var Playbar = /*#__PURE__*/function (_React$Component) {
       var prevSongIdx = currentQueue[currentSongIndex - 1];
 
       switch (this.state.loop) {
-        // No loop
         case 0:
           if (this.state.isShuffled) {
             var prevShuffleSongIdx = shuffledQueue[shuffleIndex - 1];
@@ -4576,7 +4571,6 @@ var Playbar = /*#__PURE__*/function (_React$Component) {
           }
 
           break;
-        // Repeat all in queue
 
         case 1:
           if (this.state.isShuffled) {
@@ -4624,8 +4618,6 @@ var Playbar = /*#__PURE__*/function (_React$Component) {
             }
           }
 
-        // Repeat current song
-
         case 2:
           var _audio = document.getElementById("audio");
 
@@ -4643,7 +4635,6 @@ var Playbar = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleNext",
     value: function handleNext() {
-      // implement modulo in the future
       var _this$props2 = this.props,
           fetchNextSong = _this$props2.fetchNextSong,
           currentSong = _this$props2.currentSong,
@@ -4657,7 +4648,6 @@ var Playbar = /*#__PURE__*/function (_React$Component) {
       var nextSongId = currentQueue[currentSongIndex + 1];
 
       switch (this.state.loop) {
-        // No loop
         case 0:
           if (this.state.isShuffled) {
             var nextShuffleSongIdx = shuffledQueue[shuffleIndex + 1];
@@ -4709,7 +4699,6 @@ var Playbar = /*#__PURE__*/function (_React$Component) {
           }
 
           break;
-        // Repeat all in queue
 
         case 1:
           if (this.state.isShuffled) {
@@ -4758,8 +4747,6 @@ var Playbar = /*#__PURE__*/function (_React$Component) {
               _audio18.currentTime = 0;
             }
           }
-
-        // Repeat current song
 
         case 2:
           var _audio10 = document.getElementById("audio");
@@ -7660,10 +7647,8 @@ var SongListItem = /*#__PURE__*/function (_React$Component) {
             }
           } else {
             if (pageIdx === currentSongIndex && location.pathname === currentQueueLocation) {
-              // render pause button for current song and location only
               return pauseButton;
             } else {
-              // render play button if hovering and song is not currently playing 
               return playButton;
             }
           }
@@ -8363,8 +8348,6 @@ var likesReducer = function likesReducer() {
   Object.freeze(state);
 
   switch (action.type) {
-    // case RECEIVE_USER:
-    //   return Object.assign({}, state, action.payload.user.likes)
     default:
       return state;
   }
@@ -8546,7 +8529,6 @@ var usersReducer = function usersReducer() {
       return Object.assign({}, state, action.users);
 
     case _actions_library_actions__WEBPACK_IMPORTED_MODULE_2__.REMOVE_SONG_FROM_LIBRARY:
-      // used for playbar like button when unliking from liked songs page
       return Object.assign({}, state, _defineProperty({}, action.payload.user.id, action.payload.user));
 
     default:
@@ -8875,14 +8857,10 @@ var defaultState = {
   currentSongIndex: null,
   isShuffled: false,
   shuffleIndex: null,
-  // shuffledQueue: array of shuffled indices from currentQueue
   shuffledQueue: [],
-  // pageQueue: songId's on a given page in order
   pageQueue: [],
-  // currentQueue: songId's that are currently being played
   currentQueue: [],
   currentQueueLocation: null,
-  // userQueue: array of songId's added to queue by user
   userQueue: []
 };
 
@@ -8977,7 +8955,6 @@ var playbarReducer = function playbarReducer() {
       return newState;
 
     case _actions_playbar_actions__WEBPACK_IMPORTED_MODULE_0__.END_LOOP_QUEUE:
-      // Used when reaching end of page when looping all songs
       if (newState.isShuffled) {
         newState.shuffleIndex = -1;
         newState.currentSongIndex = newState.shuffledQueue[newState.shuffleIndex];
@@ -8992,7 +8969,6 @@ var playbarReducer = function playbarReducer() {
       return newState;
 
     case _actions_playbar_actions__WEBPACK_IMPORTED_MODULE_0__.END_QUEUE:
-      // Used when reaching end of song queue
       newState.currentSong = null;
       newState.isPlaying = false;
       newState.isShuffled = false;
@@ -9004,7 +8980,6 @@ var playbarReducer = function playbarReducer() {
       return newState;
 
     case _actions_playbar_actions__WEBPACK_IMPORTED_MODULE_0__.BEGIN_LOOP_FROM_END:
-      // used when currentQueue is looped and user goes to previous song while on first song of queue,
       if (newState.isShuffled) {
         newState.shuffleIndex = newState.shuffledQueue.length;
       } else {
@@ -9736,14 +9711,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "renderSongDuration": () => (/* binding */ renderSongDuration),
 /* harmony export */   "renderTotalDuration": () => (/* binding */ renderTotalDuration)
 /* harmony export */ });
-var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]; // convert units of time to milliseconds
-
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var second = 1000;
 var minute = second * 60;
 var hour = minute * 60;
 var day = hour * 24;
 var week = day * 7;
-var month = week * 4; // convert milliseconds from renderDateAdded function back to correct units
+var month = week * 4;
 
 var convertToSeconds = function convertToSeconds(ms) {
   return Math.floor(ms / second);

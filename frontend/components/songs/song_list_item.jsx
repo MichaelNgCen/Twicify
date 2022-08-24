@@ -225,10 +225,8 @@ class SongListItem extends React.Component {
           }
         } else {
           if (pageIdx === currentSongIndex && location.pathname === currentQueueLocation) {
-            // render pause button for current song and location only
             return pauseButton;
           } else {
-            // render play button if hovering and song is not currently playing 
             return playButton;
           }
         }

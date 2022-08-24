@@ -166,7 +166,7 @@ button.artist-bio-button:hover {
 }
 
 .artist-bio-modal-child {
-  width: 768px;
+  width: 1100px;
   min-width: 500px;
   max-height: 70vh;
   height: 100%;
