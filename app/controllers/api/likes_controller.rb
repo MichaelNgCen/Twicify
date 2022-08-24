@@ -53,7 +53,6 @@ class Api::LikesController < ApplicationController
         @like.destroy!
         @user = User.find_by(id: current_user.id)
         if destroy_like_params[:from_library]
-          debugger
           render 'api/songs/show'
         else
           render 'api/users/show'

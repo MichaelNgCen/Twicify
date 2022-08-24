@@ -5797,9 +5797,7 @@ var Playlist = /*#__PURE__*/function (_React$Component) {
       if (playlistSongs && playlistSongs.length === 0) {
         renderPlaylist = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           className: "empty-playlist"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-          className: "fas fa-compact-disc"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
           id: "empty-playlist-title"
         }, "It looks like you don't have anything in this playlist yet."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
           id: "empty-playlist-text"
@@ -5809,10 +5807,7 @@ var Playlist = /*#__PURE__*/function (_React$Component) {
       } else if (likedSongs && likedSongs.length === 0) {
         renderPlaylist = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           className: "empty-liked-songs"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-          id: "empty-liked-icon",
-          className: "material-icons"
-        }, "music_note"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
           className: "empty-header"
         }, "Songs you like will appear here"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
           className: "empty-details"

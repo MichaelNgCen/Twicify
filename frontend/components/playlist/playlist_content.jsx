@@ -176,7 +176,7 @@ class Playlist extends React.Component {
     if (playlistSongs && playlistSongs.length === 0) {
       renderPlaylist = (
         <div className="empty-playlist">
-          <i className="fas fa-compact-disc"></i>
+          {/* <i className="fas fa-compact-disc"></i> */}
           <p id="empty-playlist-title">It looks like you don't have anything in this playlist yet.</p>
           <p id="empty-playlist-text"> <Link to="/search">Search</Link> for some songs to add!</p>
         </div>
@@ -184,7 +184,6 @@ class Playlist extends React.Component {
     } else if (likedSongs && likedSongs.length === 0) {
       renderPlaylist = (
         <div className="empty-liked-songs">
-          <span id="empty-liked-icon" className="material-icons">music_note</span>
           <p className="empty-header">Songs you like will appear here</p>
           <p className="empty-details">Save songs by tapping the heart icon.</p>
           <button

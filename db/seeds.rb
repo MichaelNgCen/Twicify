@@ -169,75 +169,124 @@ song24 = Song.create!(title: "I CAN'T STOP ME", track_num: 1, duration: 205, alb
 #izone album
 album11 = Album.create!(title: "COLOR*IZ", artist: artist10, year: 2018, single: false, genre: "K-pop", duration: 639)
 album11_cover = Album.find_by(title: "COLOR*IZ").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/izca.jpg"), filename: "color_iz_ca.jpg")
-song25 = Song.create!(title: "Colors", track_num: 1, duration: 218, album_id: album11.id)
-song26 = Song.create!(title: "O'My!", track_num: 2, duration: 203, album_id: album11.id)
-song27 = Song.create!(title: "La Vie en Rose", track_num: 3, duration: 218, album_id: album11.id)
+song25 = Song.create!(title: "La Vie en Rose", track_num: 1, duration: 218, album_id: album11.id)
 
 #twice album 3
 album12 = Album.create!(title: "Taste of Love", artist: artist2, year: 2021, single: false, genre: "K-pop", duration: 210)
 album12_cover = Album.find_by(title: "Taste of Love").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/twice.ca3.jpg"), filename: "twice_ca3.jpg")
-song28 = Song.create!(title: "Alcohol-Free", track_num: 1, duration: 210, album_id: album12.id)
+song26 = Song.create!(title: "Alcohol-Free", track_num: 1, duration: 210, album_id: album12.id)
 
 #twice album 4
 album13 = Album.create!(title: "Feel Special", artist: artist2, year: 2019, single: false, genre: "K-pop", duration: 206)
 album13_cover = Album.find_by(title: "Feel Special").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/twice.ca4.jpg"), filename: "twice_ca4.jpg")
-song29 = Song.create!(title: "Feel Special", track_num: 1, duration: 206, album_id: album13.id)
+song27 = Song.create!(title: "Feel Special", track_num: 1, duration: 206, album_id: album13.id)
 
 #twice album 5
 album14 = Album.create!(title: "What Is Love", artist: artist2, year: 2018, single: false, genre: "K-pop", duration: 208)
 album14_cover = Album.find_by(title: "What Is Love").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/twice.ca5.jpg"), filename: "twice_ca5.jpg")
-song30 = Song.create!(title: "What Is Love", track_num: 1, duration: 208, album_id: album14.id)
+song28 = Song.create!(title: "What Is Love", track_num: 1, duration: 208, album_id: album14.id)
 
 #blackpink album 2
 album15 = Album.create!(title: "KILL THIS LOVE", artist: artist3, year: 2019, single: false, genre: "K-pop", duration: 191)
 album15_cover = Album.find_by(title: "KILL THIS LOVE").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bp_ca2.jpg"), filename: "blackpink_ca2.jpg")
-song31 = Song.create!(title: "Kill This Love", track_num: 1, duration: 191, album_id: album15.id)
+song29 = Song.create!(title: "Kill This Love", track_num: 1, duration: 191, album_id: album15.id)
 
 #blackpink album 3
 album16 = Album.create!(title: "SQUARE UP", artist: artist3, year: 2018, single: false, genre: "K-pop", duration: 211)
 album16_cover = Album.find_by(title: "SQUARE UP").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bp_ca3.jpg"), filename: "blackpink_ca3.jpg")
-song32 = Song.create!(title: "DDU-DU DDU-DU", track_num: 1, duration: 211, album_id: album16.id)
+song30 = Song.create!(title: "DDU-DU DDU-DU", track_num: 1, duration: 211, album_id: album16.id)
 
 #blackpink album 4
 album17 = Album.create!(title: "As If It's Your Last", artist: artist3, year: 2017, single: false, genre: "K-pop", duration: 211)
 album17_cover = Album.find_by(title: "As If It's Your Last").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bp_ca4.jpg"), filename: "blackpink_ca4.jpg")
-song33 = Song.create!(title: "As If It's Your Last", track_num: 1, duration: 211, album_id: album17.id)
+song31 = Song.create!(title: "As If It's Your Last", track_num: 1, duration: 211, album_id: album17.id)
 
 #red velvet album
 album18 = Album.create!(title: "The ReVe Festival 2022 - Feel My Rhythm", artist: artist11, year: 2022, single: false, genre: "K-pop", duration: 210)
 album18_cover = Album.find_by(title: "The ReVe Festival 2022 - Feel My Rhythm").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/red_velvet_ca.jpg"), filename: "red_velvet_ca.jpg")
-song34 = Song.create!(title: "Feel My Rhythm", track_num: 1, duration: 210, album_id: album18.id)
+song32 = Song.create!(title: "Feel My Rhythm", track_num: 1, duration: 210, album_id: album18.id)
 
 #red velvet album 2
 album19 = Album.create!(title: "Queendom - The 6th Mini Album", artist: artist11, year: 2021, single: false, genre: "K-pop", duration: 181)
 album19_cover = Album.find_by(title: "Queendom - The 6th Mini Album").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/red_velvet_ca2.jpg"), filename: "red_velvet_ca2.jpg")
-song35 = Song.create!(title: "Queendom", track_num: 1, duration: 181, album_id: album19.id)
+song33 = Song.create!(title: "Queendom", track_num: 1, duration: 181, album_id: album19.id)
 
 #red velvet album 3
 album20 = Album.create!(title: "The ReVe Festival Finale", artist: artist11, year: 2019, single: false, genre: "K-pop", duration: 210)
 album20_cover = Album.find_by(title: "The ReVe Festival Finale").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/red_velvet_ca3.jpg"), filename: "red_velvet_ca3.jpg")
-song36 = Song.create!(title: "Psycho", track_num: 1, duration: 210, album_id: album20.id)
+song34 = Song.create!(title: "Psycho", track_num: 1, duration: 210, album_id: album20.id)
 
 #red velvet album 4
 album21 = Album.create!(title: "The Perfect Red Velvet - The 2nd Album Repackage", artist: artist11, year: 2018, single: false, genre: "K-pop", duration: 399)
 album21_cover = Album.find_by(title: "The Perfect Red Velvet - The 2nd Album Repackage").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/red_velvet_ca4.jpg"), filename: "red_velvet_ca4.jpg")
-song37 = Song.create!(title: "Bad Boy", track_num: 1, duration: 210, album_id: album21.id)
-song38 = Song.create!(title: "Peek-A-Boo", track_num: 2, duration: 189, album_id: album21.id)
+song35 = Song.create!(title: "Bad Boy", track_num: 1, duration: 210, album_id: album21.id)
+song36 = Song.create!(title: "Peek-A-Boo", track_num: 2, duration: 189, album_id: album21.id)
 
 #nayeon album
 album22 = Album.create!(title: "IM NAYEON", artist: artist12, year: 2022, single: false, genre: "K-pop", duration: 926)
 album22_cover = Album.find_by(title: "IM NAYEON").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/nayeon_ca.jpg"), filename: "nayeon_ca.jpg")
-song39 = Song.create!(title: "POP!", track_num: 1, duration: 168, album_id: album22.id)
-song40 = Song.create!(title: "NO PROBLEM(Feat. Felix of Stray Kids)", track_num: 2, duration: 196, album_id: album22.id)
-song41 = Song.create!(title: "LOVE COUNTDOWN (Feat. Wonstein)", track_num: 3, duration: 197, album_id: album22.id)
-song42 = Song.create!(title: "CANDYFLOSS", track_num: 4, duration: 181, album_id: album22.id)
-song43 = Song.create!(title: "ALL OR NOTHING", track_num: 5, duration: 184, album_id: album22.id)
+song37 = Song.create!(title: "POP!", track_num: 1, duration: 168, album_id: album22.id)
+song38 = Song.create!(title: "NO PROBLEM(Feat. Felix of Stray Kids)", track_num: 2, duration: 196, album_id: album22.id)
+song39 = Song.create!(title: "LOVE COUNTDOWN (Feat. Wonstein)", track_num: 3, duration: 197, album_id: album22.id)
+song40 = Song.create!(title: "CANDYFLOSS", track_num: 4, duration: 181, album_id: album22.id)
+song41 = Song.create!(title: "ALL OR NOTHING", track_num: 5, duration: 184, album_id: album22.id)
 
 #IU album
-album23 = Album.create!(title: "IU 5th Album LILAC", artist: artist13, year: 2021, single: false, genre: "K-pop", duration: 210)
+album23 = Album.create!(title: "IU 5th Album LILAC", artist: artist13, year: 2021, single: false, genre: "K-pop", duration: 340)
 album23_cover = Album.find_by(title: "IU 5th Album LILAC").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IU_ca.jpg"), filename: "IU_ca.jpg")
-song44 = Song.create!(title: "LILAC", track_num: 1, duration: 168, album_id: album23.id)
-song45 = Song.create!(title: "Celebrity", track_num: 2, duration: 172, album_id: album23.id)
+song42 = Song.create!(title: "LILAC", track_num: 1, duration: 168, album_id: album23.id)
+song43 = Song.create!(title: "Celebrity", track_num: 2, duration: 172, album_id: album23.id)
+
+#IVE album 2
+album24 = Album.create!(title: "LOVE DIVE", artist: artist4, year: 2022, single: true, genre: "K-pop", duration: 383)
+album24_cover = Album.find_by(title: "LOVE DIVE").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/ive_ca2.jpg"), filename: "ive    _ca2.jpg")
+song44 = Song.create!(title: "LOVE DIVE", track_num: 1, duration: 177, album_id: album24.id)
+song45 = Song.create!(title: "ROYAL", track_num: 2, duration: 206, album_id: album24.id)
+
+#IVE album 3
+album25 = Album.create!(title: "After LIKE", artist: artist4, year: 2022, single: true, genre: "K-pop", duration: 176)
+album25_cover = Album.find_by(title: "After LIKE").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/ive_ca3.jpg"), filename: "ive_ca3.jpg")
+song46 = Song.create!(title: "After LIKE", track_num: 1, duration: 176, album_id: album25.id)
+
+#IZONE album 2
+album26 = Album.create!(title: "One-reeler / Act IV", artist: artist10, year: 2020, single: false, genre: "K-pop", duration: 222)
+album26_cover = Album.find_by(title: "One-reeler / Act IV").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IZONE_ca2.jpg"), filename: "IZONE_ca2.jpg")
+song47 = Song.create!(title: "Panorama", track_num: 1, duration: 222, album_id: album26.id)
+
+#IZONE album 3
+album27 = Album.create!(title: "Oneiric Diary", artist: artist10, year: 2020, single: false, genre: "K-pop", duration: 192)
+album27_cover = Album.find_by(title: "Oneiric Diary").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IZONE_ca3.jpg"), filename: "IZONE_ca3.jpg")
+song48 = Song.create!(title: "Secret Story of the Swan", track_num: 1, duration: 192, album_id: album27.id)
+
+#IZONE album 4
+album28 = Album.create!(title: "BLOOM*IZ", artist: artist10, year: 2020, single: false, genre: "K-pop", duration: 217)
+album28_cover = Album.find_by(title: "BLOOM*IZ").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IZONE_ca4.jpg"), filename: "IZONE_ca4.jpg")
+song49 = Song.create!(title: "FIEST", track_num: 1, duration: 217, album_id: album28.id)
+
+#IZONE album 5
+album29 = Album.create!(title: "HEART*IZ", artist: artist10, year: 2019, single: false, genre: "K-pop", duration: 200)
+album29_cover = Album.find_by(title: "HEART*IZ").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IZONE_ca5.jpg"), filename: "IZONE_ca5.jpg")
+song50 = Song.create!(title: "Violeta", track_num: 1, duration: 200, album_id: album29.id)
+
+#aespa album 2
+album30 = Album.create!(title: "Next Level", artist: artist5, year: 2021, single: true, genre: "K-pop", duration: 221)
+album30_cover = Album.find_by(title: "Next Level").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa_ca2.jpg"), filename: "aespa_ca2.jpg")
+song51 = Song.create!(title: "Next Level", track_num: 1, duration: 221, album_id: album30.id)
+
+#aespa album 3
+album31 = Album.create!(title: "Savage - The 1st Mini Album", artist: artist5, year: 2021, single: false, genre: "K-pop", duration: 239)
+album31_cover = Album.find_by(title: "Savage - The 1st Mini Album").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa_ca3.jpg"), filename: "aespa_ca3.jpg")
+song52 = Song.create!(title: "Savage", track_num: 1, duration: 239, album_id: album31.id)
+
+#aespa album 4
+album32 = Album.create!(title: "Dreams Come True - SM STATION", artist: artist5, year: 2021, single: true, genre: "K-pop", duration: 204)
+album32_cover = Album.find_by(title: "Dreams Come True - SM STATION").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa_ca4.jpg"), filename: "aespa_ca4.jpg")
+song53 = Song.create!(title: "Dreams Come True", track_num: 1, duration: 204, album_id: album32.id)
+
+#aespa album 5
+album33 = Album.create!(title: "Girls - The 2nd Mini Album", artist: artist5, year: 2022, single: false, genre: "K-pop", duration: 240)
+album32_cover = Album.find_by(title: "Girls - The 2nd Mini Album").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa_ca5.jpg"), filename: "aespa_ca5.jpg")
+song54 = Song.create!(title: "Girls", track_num: 1, duration: 240, album_id: album32.id)
 
 #PLAYLISTS
 playlist1 = Playlist.create!(user_id: user1.id, name: "Girl Krush!", description: "All your girl crushes in one place.", private: "false")
