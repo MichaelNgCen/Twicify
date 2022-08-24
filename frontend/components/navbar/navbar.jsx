@@ -367,10 +367,7 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar" style={backgroundColor}>
         <div className="nav-content-container">
-          <div className="nav-button-container">
-
-          </div>
-
+          
           <div className="navbar-content">
             
             <h1 className={this.state.scrollTop > 254 ? "navbar-title" : "hide-navbar-title"}>
