@@ -39,32 +39,32 @@ artist13 = Artist.create!(name: "IU", bio: "Lee Ji-eun, also known by her stage 
 # Image for Le Serrafim
 artist1_portrait = Artist.first.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/lsf.jpg"), filename: "lsf.jpg")
 artist1_banner = Artist.first.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/lsf_bio.jpg"), filename: "lsf_bio.jpg")
-artist1_bio_photo = Artist.first.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/lsfBio.jpg"), filename: "lsfBio.jpg")
+artist1_bio_photo = Artist.first.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/LE_SSERAFIM_FEARLESS_MV_TEASER_2.gif"), filename: "LE_SSERAFIM_FEARLESS_MV_TEASER_2.gif")
 
 # Image for Twice
 artist2_portrait = Artist.second.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/twice.jpg"), filename: "twice.jpg")
 artist2_banner = Artist.second.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/twiceBanner.jpg"), filename: "twiceBanner.jpg")
-artist2_bio_photo = Artist.second.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/twiceBio.jpg"), filename: "twiceBio.jpg")
+artist2_bio_photo = Artist.second.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/TWICE_I_CANT_STOP_ME_MV_Platform_Teaser.gif"), filename: "TWICE_I_CANT_STOP_ME_MV_Platform_Teaser.gif")
 
 # Image for Blackpink
 artist3_portrait = Artist.third.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bp.jpg"), filename: "bp.jpg")
 artist3_banner = Artist.third.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bpBanner.jpg"), filename: "bpBanner.jpg")
-artist3_bio_photo = Artist.third.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bpBio.jpg"), filename: "bpBio.jpg")
+artist3_bio_photo = Artist.third.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/BLACKPINK__Kill_This_Love_MV_Teaser.gif"), filename: "BLACKPINK__Kill_This_Love_MV_Teaser.gif")
 
 # Image for IVE
 artist4_portrait = Artist.fourth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/ive.jpg"), filename: "ive.jpg")
 artist4_banner = Artist.fourth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/iveBanner.jpg"), filename: "iveBanner.jpg")
-artist4_bio_photo = Artist.fourth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/iveBio.jpg"), filename: "iveBio.jpg")
+artist4_bio_photo = Artist.fourth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IVE__LOVE_DIVE_Teaser.gif"), filename: "IVE__LOVE_DIVE_Teaser.gif")
 
 # Image for aespa
 artist5_portrait = Artist.fifth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa.jpg"), filename: "aespa.jpg")
 artist5_banner = Artist.fifth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespaBanner.jpg"), filename: "aespaBanner.jpg")
-artist5_bio_photo = Artist.fifth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespaBio.jpg"), filename: "aespaBio.jpg")
+artist5_bio_photo = Artist.fifth.photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/aespa__Savage_MV_Teaser.gif"), filename: "aespa__Savage_MV_Teaser.gif")
 
 # Image for Jennie
 artist6_portrait = Artist.find_by(name: "JENNIE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/jennie.jpg"), filename: "jennie.jpg")
 artist6_banner = Artist.find_by(name: "JENNIE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/pv.jpg"), filename: "pv.jpg")
-artist6_bio_photo = Artist.find_by(name: "JENNIE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/jennieBanner.jpg"), filename: "jennieBanner.jpg")
+artist6_bio_photo = Artist.find_by(name: "JENNIE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/JENNIE__SOLO_MV_TEASER.gif"), filename: "JENNIE__SOLO_MV_TEASER.gif")
 
 # Image for Kanye
 artist7_portrait = Artist.find_by(name: "Kanye West").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/kanye.jpg"), filename: "kanye.jpg")
@@ -84,22 +84,22 @@ artist9_bio_photo = Artist.find_by(name: "Ikimonogakari").photos.attach(io: URI.
 # Image for IzOne
 artist10_portrait = Artist.find_by(name: "IZ*ONE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/izone.jpg"), filename: "izone.jpg")
 artist10_banner = Artist.find_by(name: "IZ*ONE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/izoneBanner3.jpg"), filename: "izoneBanner2.jpg")
-artist10_bio_photo = Artist.find_by(name: "IZ*ONE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/izoneBio.jpg"), filename: "izoneBio.jpg")
+artist10_bio_photo = Artist.find_by(name: "IZ*ONE").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IZONE__Panorama_MV_Teaser_2.gif"), filename: "IZONE__Panorama_MV_Teaser_2.gif")
 
 # Image for Red Velvet
 artist11_portrait = Artist.find_by(name: "Red Velvet").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/redvelvet.jpg"), filename: "redvelvet.jpg")
 artist11_banner = Artist.find_by(name: "Red Velvet").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/redvelvetBanner.jpg"), filename: "redvelvetBanner.jpg")
-artist11_bio_photo = Artist.find_by(name: "Red Velvet").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/redvelvetBio.jpg"), filename: "redvelvetBio.jpg")
+artist11_bio_photo = Artist.find_by(name: "Red Velvet").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/Red_Velvet__Feel_My_Rhythm_MV_Teaser.gif"), filename: "Red_Velvet__Feel_My_Rhythm_MV_Teaser.gif")
 
 # Image for NAYEON
 artist12_portrait = Artist.find_by(name: "NAYEON").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/nayeon.jpg"), filename: "nayeon.jpg")
 artist12_banner = Artist.find_by(name: "NAYEON").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/nayeonBanner.jpg"), filename: "nayeonBanner.jpg")
-artist12_bio_photo = Artist.find_by(name: "NAYEON").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/nayeonBio.jpg"), filename: "nayeonBio.jpg")
+artist12_bio_photo = Artist.find_by(name: "NAYEON").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/NAYEON_POP_MV_Teaser_2.gif"), filename: "NAYEON_POP_MV_Teaser_2.gif")
 
-# Image for NMIXX
+# Image for IU
 artist13_portrait = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IU.jpg"), filename: "IU.jpg")
 artist13_banner = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IUBanner.jpg"), filename: "IUBanner.jpg")
-artist13_bio_photo = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IUBio.jpg"), filename: "IUBio.jpg")
+artist13_bio_photo = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/Teaser_IU_Flu.gif"), filename: "Teaser_IU_Flu.gif")
 
 #le Serrafim albums
 album1 = Album.create!(title: "FEARLESS", artist: artist1, year: 2022, single: false, genre: "K-pop", duration: 848)
