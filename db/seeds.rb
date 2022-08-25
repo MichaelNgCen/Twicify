@@ -8,13 +8,13 @@
 require 'open-uri'
 require 'resolv-replace'
 
-User.destroy_all
-Song.destroy_all
-Album.destroy_all
-Artist.destroy_all
-Playlist.destroy_all
-PlaylistSong.destroy_all
-Like.destroy_all
+User.delete_all
+Song.delete_all
+Album.delete_all
+Artist.delete_all
+Playlist.delete_all
+PlaylistSong.delete_all
+Like.delete_all
 
 # create users
 user1 = User.create!(username: "kimDahyun", password: "JennieKim", email: "demoemail@demo.com", email_confirmation: "demoemail@demo.com", gender: "NB", birthday:"1997/12/23")
@@ -33,7 +33,7 @@ artist9 = Artist.create!(name: "Ikimonogakari", bio: "Japanese pop rock duo from
 artist10 = Artist.create!(name: "IZ*ONE", bio: "The group was composed of twelve members: Jang Won-young, Sakura Miyawaki, Jo Yu-ri, Choi Ye-na, An Yu-jin, Nako Yabuki, Kwon Eun-bi, Kang Hye-won, Hitomi Honda, Kim Chae-won, Kim Min-ju, and Lee Chae-yeon.\n")
 artist11 = Artist.create!(name: "Red Velvet", bio: "They originally debuted on August 1, 2014, with the single Happiness with the four-member line-up of Irene, Seulgi, Wendy and Joy. A fifth member, Yeri, joined the group in March 2015, following the release of their first mini album, Ice Cream Cake.\n")
 artist12 = Artist.create!(name: "NAYEON", bio: "She became a member of the South Korean girl group Twice, under JYP Entertainment, in 2015 as a winning contestant of the reality survival television show Sixteen.\n")
-# artist13 = Artist.create!(name: "IU", bio: "Lee Ji-eun, also known by her stage name IU, is a South Korean singer-songwriter and actress.\n")
+artist13 = Artist.create!(name: "IU", bio: "Lee Ji-eun, also known by her stage name IU, is a South Korean singer-songwriter and actress.\n")
 
 
 # Image for Le Serrafim
@@ -97,9 +97,9 @@ artist12_banner = Artist.find_by(name: "NAYEON").photos.attach(io: URI.open("htt
 artist12_bio_photo = Artist.find_by(name: "NAYEON").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/NAYEON_POP_MV_Teaser_2.gif"), filename: "NAYEON_POP_MV_Teaser_2.gif")
 
 # Image for IU
-# artist13_portrait = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IU.jpg"), filename: "IU.jpg")
-# artist13_banner = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IUBanner.jpg"), filename: "IUBanner.jpg")
-# artist13_bio_photo = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/Teaser_IU_Flu.gif"), filename: "Teaser_IU_Flu.gif")
+artist13_portrait = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IU.jpg"), filename: "IU.jpg")
+artist13_banner = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IUBanner.jpg"), filename: "IUBanner.jpg")
+artist13_bio_photo = Artist.find_by(name: "IU").photos.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/Teaser_IU_Flu.gif"), filename: "Teaser_IU_Flu.gif")
 
 #le Serrafim albums
 album1 = Album.create!(title: "FEARLESS", artist: artist1, year: 2022, single: false, genre: "K-pop", duration: 848)
@@ -159,8 +159,8 @@ Song.find_by(title:'Heartless').audio_file.attach(io: URI.open("https://twicify-
 #BMTH Album
 album8 = Album.create!(title: "This Is What The Edge Of Your Seat Was Made For", artist: artist8, year: 2004, single: false, genre: "Rock", duration: 1106)
 album8_cover = Album.find_by(title: "This Is What The Edge Of Your Seat Was Made For").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bmth_ca.jpg"), filename: "bmth_ca.jpg")
-song15 = Song.create!(title: "RAWWWRR!", track_num: 3, duration: 253, album_id: album8.id)   
-Song.find_by(title:'RAWWWRR').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/Rawwwrr.mp3"), filename: "Rawwwrr.mp3")
+song15 = Song.create!(title: "RAWWWRR!", track_num: 3, duration: 253, album_id: album8.id)
+Song.find_by(title:'RAWWWRR!').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/Rawwwrr.mp3"), filename: "Rawwwrr.mp3")
 
 #Blue Bird
 album9 = Album.create!(title: "Chou Ikimonobakari Tennen Kinen Members Best Selection", artist: artist9, year: 2006, single: true, genre: "Anime", duration: 215)
@@ -196,7 +196,7 @@ Song.find_by(title:'Feel Special').audio_file.attach(io: URI.open("https://twici
 album14 = Album.create!(title: "What Is Love", artist: artist2, year: 2018, single: false, genre: "K-pop", duration: 208)
 album14_cover = Album.find_by(title: "What Is Love").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/twice.ca5.jpg"), filename: "twice_ca5.jpg")
 song21 = Song.create!(title: "What Is Love", track_num: 1, duration: 208, album_id: album14.id)
-Song.find_by(title:'What Is Love').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/What_Is_Love.mp3"), filename: "What_Is_Love.mp3")
+Song.find_by(title:'What Is Love').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/What_is_Love.mp3"), filename: "What_is_Love.mp3")
 
 #blackpink album 2
 album15 = Album.create!(title: "KILL THIS LOVE", artist: artist3, year: 2019, single: false, genre: "K-pop", duration: 191)
@@ -208,7 +208,7 @@ Song.find_by(title:'Kill This Love').audio_file.attach(io: URI.open("https://twi
 album16 = Album.create!(title: "SQUARE UP", artist: artist3, year: 2018, single: false, genre: "K-pop", duration: 211)
 album16_cover = Album.find_by(title: "SQUARE UP").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/bp_ca3.jpg"), filename: "blackpink_ca3.jpg")
 song23 = Song.create!(title: "DDU-DU DDU-DU", track_num: 1, duration: 211, album_id: album16.id)
-Song.find_by(title:'DDU-DU DDU-DU').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/DDU-DU_DDU-DU.mp3"), filename: "DDU-DU_DDU-DU.mp3")
+Song.find_by(title:'DDU-DU DDU-DU').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/DDU-DU+DDU-DU.mp3"), filename: "DDU-DU DDU-DU.mp3")
 
 #blackpink album 4
 album17 = Album.create!(title: "As If It's Your Last", artist: artist3, year: 2017, single: false, genre: "K-pop", duration: 211)
@@ -248,11 +248,11 @@ album22_cover = Album.find_by(title: "IM NAYEON").cover_art.attach(io: URI.open(
 song30 = Song.create!(title: "POP!", track_num: 1, duration: 168, album_id: album22.id)
 Song.find_by(title:'POP!').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/POP.mp3"), filename: "POP.mp3")
 
-#IU album
-# album23 = Album.create!(title: "IU 5th Album LILAC", artist: artist13, year: 2021, single: false, genre: "K-pop", duration: 340)
-# album23_cover = Album.find_by(title: "IU 5th Album LILAC").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IU_ca.jpg"), filename: "IU_ca.jpg")
-# song31 = Song.create!(title: "LILAC", track_num: 1, duration: 168, album_id: album23.id)
-# Song.find_by(title:'LILAC').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/LILAC.mp3"), filename: "LILAC.mp3")
+# IU album
+album23 = Album.create!(title: "IU 5th Album LILAC", artist: artist13, year: 2021, single: false, genre: "K-pop", duration: 340)
+album23_cover = Album.find_by(title: "IU 5th Album LILAC").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/IU_ca.jpg"), filename: "IU_ca.jpg")
+song31 = Song.create!(title: "LILAC", track_num: 1, duration: 168, album_id: album23.id)
+Song.find_by(title:'LILAC').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/LILAC.mp3"), filename: "LILAC.mp3")
 
 #IVE album 2
 album24 = Album.create!(title: "LOVE DIVE", artist: artist4, year: 2022, single: true, genre: "K-pop", duration: 383)
@@ -266,7 +266,7 @@ Song.find_by(title:'ROYAL').audio_file.attach(io: URI.open("https://twicify-seed
 album25 = Album.create!(title: "After LIKE", artist: artist4, year: 2022, single: true, genre: "K-pop", duration: 176)
 album25_cover = Album.find_by(title: "After LIKE").cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/ive_ca3.jpg"), filename: "ive_ca3.jpg")
 song34 = Song.create!(title: "After LIKE", track_num: 1, duration: 176, album_id: album25.id)
-Song.find_by(title:'After LIKE').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/After_Like.mp3"), filename: "After_Like.mp3")
+Song.find_by(title:'After LIKE').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/After_LIKE.mp3"), filename: "After_LIKE.mp3")
 
 #IZONE album 2
 album26 = Album.create!(title: "One-reeler / Act IV", artist: artist10, year: 2020, single: false, genre: "K-pop", duration: 222)

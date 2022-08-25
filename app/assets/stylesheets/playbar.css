@@ -63,12 +63,16 @@ div.random-button-container:hover {
 }
 
 span#forward, span#back {
+  position: absolute;
+  margin-top: .9vw;
   background: none;
   font-size: 25px;
   cursor: default;
 }
 
 span#repeat {
+  z-index: 100;
+  color: white;
   background: none;
   font-size: 17px;
   cursor: default;
