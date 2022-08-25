@@ -130,6 +130,7 @@ song9 = Song.create!(title: "Lovesick Girls", track_num: 5, duration: 194, album
 Song.find_by(title:'How You Like That').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/How_You_Like_That.mp3"), filename: "How_You_Like_That.mp3")
 Song.find_by(title:'Pretty Savage').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/Pretty_Savage.mp3"), filename: "Pretty_Savage.mp3")
 Song.find_by(title:'Lovesick Girls').audio_file.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/Lovesick_Girls.mp3"), filename: "Lovesick_Girls.mp3")
+
 #IVE album
 album4 = Album.create!(title: "ELEVEN", artist: artist4, year: 2021, single: true, genre: "K-pop", duration: 382)
 album4_cover = Album.fourth.cover_art.attach(io: URI.open("https://twicify-seed.s3.amazonaws.com/ive_ca.jpg"), filename: "ive_ca.jpg")
