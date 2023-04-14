@@ -25,7 +25,7 @@ LogIn Screen
 
 <img src="https://user-images.githubusercontent.com/38708266/231940406-ff88d7c9-6a39-400d-a578-bb2e168a2eca.gif" width="640" height="360"/>
 
--  Function animates the gradual appearance of a demo username and password, then logs the user in using the demo credentials.
+- handleDemo() function animates the gradual appearance of a demo username and password, then logs the user in using the hardcoded demo credentials. It is likely used as a demo or tutorial feature in a login form component.
 
 <img width="275" alt="Screen Shot 2023-04-14 at 12 19 06 AM" src="https://user-images.githubusercontent.com/38708266/231940720-3a6fa005-b0eb-49ba-9f21-49ee68287a02.png">
 
